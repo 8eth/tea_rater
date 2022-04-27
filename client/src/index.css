@@ -1,5 +1,10 @@
 body {
-  background-color: rgb(213, 216, 242);
+  background-color: rgb(238, 236, 236);
+}
+
+.background {
+  background: rgb(238, 236, 236);
+  text-align: center;
 }
 
 .indent {
@@ -22,11 +27,6 @@ body {
 }
 
 .center {
-  text-align: center;
-}
-
-.background {
-  background: rgb(213, 216, 242);
   text-align: center;
 }
 

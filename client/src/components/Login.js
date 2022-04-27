@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// import Signup from './Signup';
 
 function Login({ setUser, setIsAuthenticated }) {
   const [username, setUsername] = useState("");
@@ -36,7 +35,6 @@ function Login({ setUser, setIsAuthenticated }) {
 
   return (
     <div className="background">
-      <h1>Tea Rater</h1>
       <h3 className="center-content">Login</h3>
       <div className="form-border center-content">
         <div className="ui grid">
