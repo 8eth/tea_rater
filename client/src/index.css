@@ -1,0 +1,52 @@
+body {
+  background-color: rgb(213, 216, 242);
+}
+
+.indent {
+  margin: 0% 8% 0% 8%;
+  text-align: center;
+}
+
+.center-content {
+  text-align: center;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-border {
+  margin: 20px;
+  padding: 20px;
+  border-style: dotted;
+  border-color: lightgray;
+}
+
+.center {
+  text-align: center;
+}
+
+.background {
+  background: rgb(213, 216, 242);
+  text-align: center;
+}
+
+.center-page {
+  margin-left: 210px;
+  margin-top: 150px;
+  width: 50%;
+  padding: 100px;
+}
+
+.errors {
+  color: red;
+}
+
+.footer {
+  border-top: 1px solid gray;
+  color: #707070;
+  text-align: left;
+  padding-bottom: 2px;
+  padding-left: 3px;
+  display: flex;
+  justify-content: space-between;
+}
