@@ -1,12 +1,12 @@
 import React from 'react'
-import NavBar from './NavBar'
+import TeaList from './TeaList'
 
-function Home({ setIsAuthenticated, setUser, user }) {
+function Home() {
 
   return (
     <div className="background"> 
-
-      <NavBar setUser={setUser} setIsAuthenticated={setIsAuthenticated} user={user}/>
+      
+      {/* <TeaList/> */}
 
     </div>
   )

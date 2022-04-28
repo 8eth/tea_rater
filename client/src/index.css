@@ -19,7 +19,14 @@ body {
   justify-content: center;
 }
 
-.form-border {
+.container {
+  margin: 40px;
+  padding: 20px;
+  /* border-style: dotted; */
+  border-color: lightgray;
+}
+
+.form-border  {
   margin: 20px;
   padding: 20px;
   border-style: dotted;

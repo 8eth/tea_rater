@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react"
 import { Route, Switch } from "react-router-dom"
-import Home from "./components/Home"
+import NavBar from "./components/NavBar"
 import Auth from "./components/Auth"
+import Home from "./components/Home"
+import TeaList from "./components/TeaList"
 
 function App() {
 
@@ -30,6 +32,11 @@ function App() {
   return (
     
     <div className="background">
+      <NavBar
+        setUser={setUser} 
+        setIsAuthenticated={setIsAuthenticated}
+        user={user}
+      />
 
       <Switch>
       
@@ -41,11 +48,11 @@ function App() {
         </Route>
 
         <Route exact path="/">
-          <Home 
-            setUser={setUser} 
-            setIsAuthenticated={setIsAuthenticated}
-            user={user}
-          />
+          <Home />
+        </Route>
+
+        <Route exact path="/teas">
+          <TeaList />
         </Route>
 
       </Switch>
