@@ -22,6 +22,13 @@ body {
 .container {
   margin: 40px;
   padding: 20px;
+  border-color: lightgray;
+}
+
+.detail-container {
+  margin-right: 80px;
+  padding-top: 80px;
+  /* width: 500px; */
   /* border-style: dotted; */
   border-color: lightgray;
 }
@@ -32,6 +39,10 @@ body {
   border-style: dotted;
   border-color: lightgray;
 }
+
+/* .image {
+  height: 100px;
+} */
 
 .center {
   text-align: center;
@@ -46,6 +57,19 @@ body {
 
 .errors {
   color: red;
+}
+
+.divider {
+  border-width: thin;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 0px;
+  border-color: lightgray;
+  border-style: solid;
+}
+
+a {
+  color: rgb(100, 96, 96);
 }
 
 .footer {

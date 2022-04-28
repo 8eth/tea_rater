@@ -45,6 +45,7 @@ function Login({ setUser, setIsAuthenticated }) {
             <label> Username
               <input
                 type="text"
+                placeholder="Username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />
@@ -52,6 +53,7 @@ function Login({ setUser, setIsAuthenticated }) {
             <label htmlFor="password">Password:</label>
               <input
                 type="password"
+                placeholder="Password"
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

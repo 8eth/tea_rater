@@ -4,12 +4,14 @@ import NavBar from "./components/NavBar"
 import Auth from "./components/Auth"
 import Home from "./components/Home"
 import TeaList from "./components/TeaList"
+import TeaDetail from "./components/TeaDetail"
 
 function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
-  
+  const [teas, setTeas] = useState([])
+
   useEffect(() => {
     fetch('/authorize')
     .then((res) => {
@@ -25,9 +27,17 @@ function App() {
       }
     });
   },[]);
-  
+
+  useEffect(() => {
+    fetch("/teas")
+    .then((r) => r.json())
+    .then(setTeas)
+  }, [])
+
   if (!isAuthenticated) return <Auth error={'please login'} setIsAuthenticated={setIsAuthenticated} setUser={setUser} />;
   if (!user) return <Auth setUser={setUser} setIsAuthenticated={setIsAuthenticated} />
+
+
 
   return (
     
@@ -52,7 +62,15 @@ function App() {
         </Route>
 
         <Route exact path="/teas">
-          <TeaList />
+          <TeaList 
+            teas={teas}
+          />
+        </Route>
+
+        <Route path="/teas/:id">
+          <TeaDetail 
+            teas={teas}
+          />
         </Route>
 
       </Switch>

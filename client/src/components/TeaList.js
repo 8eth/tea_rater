@@ -1,15 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import TeaCard from './TeaCard'
 
-
-function TeaList() {
-    const [teas, setTeas] = useState([])
-
-    useEffect(() => {
-        fetch("/teas")
-        .then((r) => r.json())
-        .then(setTeas)
-    }, [])
+function TeaList({teas}) {
 
     const mappedTeas = teas.map((tea) =>
         <TeaCard
@@ -23,7 +15,6 @@ function TeaList() {
             <div className="ui grid">
                 <div className="ui center aligned four wide row grid container">{mappedTeas}</div>
             </div>
-
         </div>
     )
 }

@@ -64,6 +64,7 @@ import React, { useState } from 'react'
               <label htmlFor="username">Username:</label>
               <input
                 name="username"
+                placeholder="Username"
                 type="text"
                 id={FormData.username}
                 value={formData.username}
@@ -72,6 +73,7 @@ import React, { useState } from 'react'
               <label htmlFor="password">Password:</label>
               <input
                 name="password"
+                placeholder="Password"
                 type="password"
                 id={FormData.password}
                 value={formData.password}
@@ -80,6 +82,7 @@ import React, { useState } from 'react'
               <label htmlFor="password_confirmation">Confirm Password:</label>
               <input
                 name="passwordConfirmation"
+                placeholder="Confirm Password"
                 type="password"
                 id={FormData.password_confirmation}
                 value={formData.passwordConfirmation}
@@ -88,6 +91,7 @@ import React, { useState } from 'react'
               <label>Short Bio:</label>
               <input
                 name="bio"
+                placeholder="Short Bio"
                 type="text"
                 id={FormData.name}
                 value={formData.bio}
