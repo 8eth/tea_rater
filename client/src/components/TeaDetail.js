@@ -13,31 +13,32 @@ function TeaDetail({ teas }) {
         <div className="item">
           
           <div>
-            <div className="image">
-              <img src={tea.image} alt={tea.name}/>
+            <div className="ui extra large image">
+                <img src={tea.image} alt={tea.name}/>
             </div>
           </div>
 
           <div className="detail-container">
+            <h2>{tea.name}</h2>
+            <p className="divider"></p>
+            <br/>
+            <br/>
             <div className="content">
-              <div className="extra">
 
-                Description
-                <p className="divider"></p>
+                <h3>Description</h3>
+                {/* <p className="divider"></p> */}
                 <h5>{tea.description}</h5>
-                <br/>
 
-                Ingredients
-                <p className="divider"></p>
+                <h3>Ingredients</h3>
+                {/* <p className="divider"></p> */}
                 <h5>{tea.ingredients}</h5>
-                <br/>
 
-                Origin
-                <p className="divider"></p>
+                <h3>Origin</h3>
+                {/* <p className="divider"></p> */}
                 <h5>{tea.origin}</h5>
-              </div>
             </div>
           </div>
+
 
         </div>
       </div>

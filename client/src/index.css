@@ -26,11 +26,10 @@ body {
 }
 
 .detail-container {
-  margin-right: 80px;
-  padding-top: 80px;
-  /* width: 500px; */
-  /* border-style: dotted; */
+  margin-right: 100px;
+  padding-top: 40px;
   border-color: lightgray;
+  /* border-style: dotted; */
 }
 
 .form-border  {
@@ -66,6 +65,22 @@ body {
 
 a {
   color: rgb(100, 96, 96);
+}
+
+h2 {
+  color: rgb(89, 116, 8);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center;
+}
+
+h5 {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .footer {
