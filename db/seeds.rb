@@ -1,4 +1,4 @@
-puts "Clearing db..."
+puts "Clearing db 🗑️ ..."
 
 User.destroy_all
 Tea.destroy_all
@@ -47,4 +47,13 @@ Tea.create(
     shop: "https://www.smithtea.com/collections/all-tea/products/big-hibiscus",
 )
 
-puts "Done seeding✔️!"
+puts "Making Reviews 🤔 ..."
+Review.create(
+    taste: 'Best Tea Ever!!', 
+    rating: 5,
+    recommend: true, 
+    tea_id: 1, 
+    user_id: 1,
+)
+
+puts "Done seeding ✅ !"

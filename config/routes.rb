@@ -1,6 +1,7 @@
  Rails.application.routes.draw do
 
-  resources :teas
+  resources :teas  
+  resources :reviews
   resources :users, except: [:update, :destroy]
 
   get "/authorize", to: "users#show"
