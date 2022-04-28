@@ -1,7 +1,7 @@
 import React from 'react'
 import TeaCard from './TeaCard'
 
-function TeaList({teas}) {
+function TeaList({ teas }) {
 
     const mappedTeas = teas.map((tea) =>
         <TeaCard

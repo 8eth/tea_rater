@@ -37,8 +37,6 @@ function App() {
   if (!isAuthenticated) return <Auth error={'please login'} setIsAuthenticated={setIsAuthenticated} setUser={setUser} />;
   if (!user) return <Auth setUser={setUser} setIsAuthenticated={setIsAuthenticated} />
 
-
-
   return (
     
     <div className="background">

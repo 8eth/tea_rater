@@ -8,10 +8,9 @@ function TeaDetail({ teas }) {
 
   return (
     <div >
-
       <div className="ui items">
         <div className="item">
-          
+        
           <div>
             <div className="ui extra large image">
                 <img src={tea.image} alt={tea.name}/>
