@@ -4,7 +4,14 @@ import TeaReviewList from "./TeaReviewList"
 
 function TeaDetail({ teas }) {
   let {id} = useParams()
-  let tea = teas[parseInt(id)-1] 
+  let tea = teas[parseInt(id)-1] //    replace with find by id
+
+  if (tea === undefined) {
+    return (<div>loading</div>)
+  }
+
+  console.log(id)
+  console.log(teas)
 
   return (
     <div >

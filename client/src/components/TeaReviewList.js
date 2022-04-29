@@ -19,7 +19,7 @@ function TeaReviewList({ review }) {
                 </div>
             </div>
 
-            <div class="ui vertical divider"></div>
+            <div className="ui vertical divider"></div>
 
         </div>
         

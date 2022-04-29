@@ -1,4 +1,6 @@
 class TeaSerializer < ActiveModel::Serializer
-  has_many :reviews
   attributes :id, :name, :image, :description, :ingredients, :origin, :shop
+
+  has_many :reviews
+  has_many :users
 end

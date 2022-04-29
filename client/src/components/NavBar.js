@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
 
-function NavBar({ setIsAuthenticated, setUser, user }) {
+function NavBar({ setIsAuthenticated, setUser }) {
 
   const logout = () => {
     fetch('/logout',{

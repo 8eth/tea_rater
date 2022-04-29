@@ -102,8 +102,8 @@ import React, { useState } from 'react'
               <br></br>
               {/* <button className="ui submit button center" type="submit">Sign Up</button> */}
 
-              <button class="ui primary labeled icon button" type="submit">
-                <i class="signup icon"></i>
+              <button className="ui primary labeled icon button" type="submit">
+                <i className="signup icon"></i>
                 Sign Up
               </button>
 

@@ -70,8 +70,8 @@ function Login({ setUser, setIsAuthenticated }) {
             <br></br>
             {/* <button className="ui submit button center" type="submit">Login</button> */}
 
-            <button class="ui primary labeled icon button" type="submit">
-              <i class="unlock alternate icon"></i>
+            <button className="ui primary labeled icon button" type="submit">
+              <i className="unlock alternate icon"></i>
               Login
             </button>
 

@@ -50,7 +50,6 @@ function App() {
       <NavBar
         setUser={setUser} 
         setIsAuthenticated={setIsAuthenticated}
-        user={user}
       />
 
       <Switch>
