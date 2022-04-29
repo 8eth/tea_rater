@@ -10,9 +10,6 @@ function TeaDetail({ teas }) {
     return (<div>loading</div>)
   }
 
-  console.log(id)
-  console.log(teas)
-
   return (
     <div >
       <div className="ui items">
