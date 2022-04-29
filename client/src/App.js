@@ -66,9 +66,9 @@ function App() {
         </Route>
 
         <Route path="/teas/:id">
-          <TeaDetail 
-            teas={teas}
-          />
+            <TeaDetail 
+              teas={teas}
+            />
         </Route>
 
       </Switch>

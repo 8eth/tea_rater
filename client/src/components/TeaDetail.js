@@ -5,17 +5,6 @@ import TeaReviewList from "./TeaReviewList"
 function TeaDetail({ teas }) {
   let {id} = useParams()
   let tea = teas[parseInt(id)-1] 
-  
-  // let reviews = tea.reviews
-  
-
-  // const mappedReviews = reviews.map((review) =>
-  
-  //   <TeaReviewList
-  //       key={tea.id}
-  //       review={review}
-  //   />
-  // )
 
   return (
     <div >
@@ -24,26 +13,37 @@ function TeaDetail({ teas }) {
         
           <div>
             <div className="ui extra large image">
-                <img src={tea.image} alt={tea.name}/>
+              <img src={tea.image} alt={tea.name}/>
             </div>
+            <button className="ui button">
+              <i className="shopping large cart icon"></i>  
+              <a className="a" href={tea.shop}> BUY IT FROM THE RETAILER </a>
+            </button>
           </div>
 
           <div className="detail-container">
+           
+
             <h2>{tea.name}</h2>
             <p className="divider"></p>
             <br/>
-            <br/>
+          
             <div className="content">
+              <div className="ui placeholder segment"> 
+                <div className="ui one column small grid">
+                  <div className="column">
+                    <h3>Description</h3>
+                    <h5>{tea.description}</h5>
 
-              <h3>Description</h3>
-              <h5>{tea.description}</h5>
+                    <h3>Ingredients</h3>
+                    <h5>{tea.ingredients}</h5>
 
-              <h3>Ingredients</h3>
-              <h5>{tea.ingredients}</h5>
-
-              <h3>Origin</h3>
-              <h5>{tea.origin}</h5>
-
+                    <h3>Origin</h3>
+                    <h5>{tea.origin}</h5>
+                  </div>
+                 
+                </div>
+              </div>
               <p className="divider"></p>
               <h3>Reviews</h3>
 

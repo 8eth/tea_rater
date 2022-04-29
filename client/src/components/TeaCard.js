@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
 
-function TeaCard({ tea, reviews }) {
+function TeaCard({ tea }) {
   
   return (
     <div className='center aligned cards'>
@@ -24,7 +24,7 @@ function TeaCard({ tea, reviews }) {
 
           <button className="ui button">
             <i className="shopping cart icon"></i>  
-              <a className="a" href={tea.shop}>Shop</a>
+            <a className="a" href={tea.shop}>Shop</a>
           </button>
         </div>
          

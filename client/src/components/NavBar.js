@@ -15,7 +15,11 @@ function NavBar({ setIsAuthenticated, setUser, user }) {
   return ( 
     <div>
 
-      <h1 className="center">Tea Rater</h1>
+      <br></br>
+      <div>
+        <i className="large coffee icon left floated"></i>  
+        <h1 className="center">TEA RATER</h1>
+      </div>
       <br></br>
 
       <NavLink
@@ -25,7 +29,7 @@ function NavBar({ setIsAuthenticated, setUser, user }) {
         activeStyle={{
           background: "#E6E6E8",
         }}>
-        Home
+        HOME
       </NavLink> 
 
       <NavLink
@@ -35,10 +39,10 @@ function NavBar({ setIsAuthenticated, setUser, user }) {
         activeStyle={{
           background: "#E6E6E8",
         }}>
-        Teas
+        ALL TEAS
       </NavLink> 
 
-      <button className="ui center floated button" onClick={()=>logout()}>Logout</button>
+      <button className="ui center floated button" onClick={()=>logout()}>LOG OUT</button>
 
     </div>
   )
