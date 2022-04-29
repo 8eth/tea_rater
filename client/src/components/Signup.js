@@ -54,6 +54,7 @@ import React, { useState } from 'react'
   
     return (
       <div className="background">
+        <br></br>
         <h3 className="center-content">Signup</h3>
         <div className="form-border center-content">
           <div className="ui grid">
@@ -99,7 +100,13 @@ import React, { useState } from 'react'
               />
               <br></br>
               <br></br>
-              <button className="ui submit button center" type="submit">Sign Up</button>
+              {/* <button className="ui submit button center" type="submit">Sign Up</button> */}
+
+              <button class="ui primary labeled icon button" type="submit">
+                <i class="signup icon"></i>
+                Sign Up
+              </button>
+
             </form>
           </div>
         </div>

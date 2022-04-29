@@ -29,14 +29,20 @@ body {
   margin-right: 100px;
   padding-top: 40px;
   border-color: lightgray;
-  /* border-style: dotted; */
 }
 
 .form-border  {
   margin: 20px;
   padding: 20px;
-  border-style: dotted;
+  /* border-style: dotted; */
   border-color: lightgray;
+}
+
+.home-border  {
+  margin-left: 80px;
+  margin-right: 80px;
+  padding-top: 10px;
+  padding-bottom: 40px;
 }
 
 .center {
@@ -63,6 +69,40 @@ body {
   border-style: solid;
 }
 
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+  text-align: left;
+  color: black;
+  margin-left: 80px;
+  margin-top: 23px;
+  margin-bottom: 15px;
+}
+
+.logo-center {
+  font-size: 30px;
+  font-weight: 800;
+  text-align: left;
+  color: black;
+  margin-left: 80px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBar {
+  margin-right: 80px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.left {
+  margin-right: 250px;
+}
+
 .a {
   color: rgb(100, 96, 96);
 }
@@ -87,8 +127,10 @@ h5 {
   border-top: 1px solid gray;
   color: #707070;
   text-align: left;
-  padding-bottom: 2px;
-  padding-left: 3px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
   display: flex;
   justify-content: space-between;
 }

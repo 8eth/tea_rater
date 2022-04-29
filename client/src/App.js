@@ -5,6 +5,7 @@ import Auth from "./components/Auth"
 import Home from "./components/Home"
 import TeaList from "./components/TeaList"
 import TeaDetail from "./components/TeaDetail"
+import UserPage from "./components/UserPage"
 
 function App() {
 
@@ -68,6 +69,12 @@ function App() {
         <Route path="/teas/:id">
             <TeaDetail 
               teas={teas}
+            />
+        </Route>
+
+        <Route path="/profile">
+            <UserPage 
+              user={user}
             />
         </Route>
 

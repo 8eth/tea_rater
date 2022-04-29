@@ -35,7 +35,10 @@ function Login({ setUser, setIsAuthenticated }) {
 
   return (
     <div className="background">
+      <br></br>
+      <br></br>
       <h3 className="center-content">Login</h3>
+
       <div className="form-border center-content">
         <div className="ui grid">
           <form 
@@ -65,7 +68,21 @@ function Login({ setUser, setIsAuthenticated }) {
               ))}
             </div>
             <br></br>
-            <button className="ui submit button center" type="submit">Login</button>
+            {/* <button className="ui submit button center" type="submit">Login</button> */}
+
+            <button class="ui primary labeled icon button" type="submit">
+              <i class="unlock alternate icon"></i>
+              Login
+            </button>
+
+            <div>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+            </div>
+
           </form>
         </div>
       </div>

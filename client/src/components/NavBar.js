@@ -13,37 +13,53 @@ function NavBar({ setIsAuthenticated, setUser, user }) {
     })
   }
   return ( 
-    <div>
+    <div className="ui placeholder segment logo">
+      <div className="ui three column small grid ">
 
-      <br></br>
-      <div>
-        <i className="large coffee icon left floated"></i>  
-        <h1 className="center">TEA RATER</h1>
+        <div className="logo">
+          <i className="small coffee icon left floated"></i> TEA RATER
+        </div>
+
+        <div className="left column">
+          
+        </div>
+
+        <div className="navBar">
+
+          <NavLink
+            to="/"
+            exact
+            className="ui center floated button"
+            activeStyle={{
+              background: "#E6E6E8",
+            }}>
+            HOME
+          </NavLink> 
+
+          <NavLink
+            to="/teas"
+            exact
+            className="ui center floated button"
+            activeStyle={{
+              background: "#E6E6E8",
+            }}>
+            ALL TEAS
+          </NavLink> 
+
+          <NavLink
+            to="/profile"
+            exact
+            className="ui center floated button"
+            activeStyle={{
+              background: "#E6E6E8",
+            }}>
+            PROFILE
+          </NavLink> 
+
+          <button className="ui center floated button" onClick={()=>logout()}>LOG OUT</button>
+        </div>
+
       </div>
-      <br></br>
-
-      <NavLink
-        to="/"
-        exact
-        className="ui center floated button"
-        activeStyle={{
-          background: "#E6E6E8",
-        }}>
-        HOME
-      </NavLink> 
-
-      <NavLink
-        to="/teas"
-        exact
-        className="ui center floated button"
-        activeStyle={{
-          background: "#E6E6E8",
-        }}>
-        ALL TEAS
-      </NavLink> 
-
-      <button className="ui center floated button" onClick={()=>logout()}>LOG OUT</button>
-
     </div>
   )
 }
