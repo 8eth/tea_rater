@@ -1,8 +1,8 @@
 import React from 'react'
 import TeaCard from './TeaCard'
+import Search from './Search'
 
-function TeaList({ teas }) {
-
+function TeaList({ teas, searchTerm, onChangeSearch}) {
     const mappedTeas = teas.map((tea) =>
         <TeaCard
             key={tea.id}
@@ -12,6 +12,13 @@ function TeaList({ teas }) {
 
     return (
         <div className="container">
+            <div className="center-content">
+                <Search
+                    searchTerm = {searchTerm}   
+                    onChangeSearch = {onChangeSearch}
+                />
+            </div>
+
             <div className="ui grid">
                 <div className="ui center aligned four wide row grid container">{mappedTeas}</div>
             </div>

@@ -20,8 +20,8 @@ body {
 }
 
 .container {
-  margin: 40px;
-  padding: 20px;
+  /* margin: 40px; */
+  /* padding: 20px; */
   border-color: lightgray;
 }
 
@@ -29,6 +29,10 @@ body {
   margin-right: 100px;
   padding-top: 40px;
   border-color: lightgray;
+}
+
+.search {
+  margin: 20px;
 }
 
 .form-border  {

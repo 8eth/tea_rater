@@ -6,12 +6,14 @@ import Home from "./components/Home"
 import TeaList from "./components/TeaList"
 import TeaDetail from "./components/TeaDetail"
 import UserPage from "./components/UserPage"
+import Footer from "./components/Footer"
 
 function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
-  const [teas, setTeas] = useState([])
+  const [teas, setTeas] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     fetch('/authorize')
@@ -34,6 +36,10 @@ function App() {
     .then((r) => r.json())
     .then(setTeas)
   }, [])
+
+  const searchedTeas = teas.filter ((tea) => 
+    tea.name.toLowerCase().includes(searchTerm.toLowerCase())
+  )
 
   if (!isAuthenticated) return <Auth error={'please login'} setIsAuthenticated={setIsAuthenticated} setUser={setUser} />;
   if (!user) return <Auth setUser={setUser} setIsAuthenticated={setIsAuthenticated} />
@@ -62,7 +68,9 @@ function App() {
 
         <Route exact path="/teas">
           <TeaList 
-            teas={teas}
+            teas={searchedTeas}
+            searchTerm = {searchTerm}   
+            onChangeSearch = {setSearchTerm}
           />
         </Route>
 
@@ -79,7 +87,9 @@ function App() {
         </Route>
 
       </Switch>
-      
+
+      <Footer/>
+
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Signup from "./Signup"
 import Login from './Login'
+import Footer from './Footer'
 
 function Auth({ setUser, setIsAuthenticated }) {
   return (
@@ -29,10 +30,7 @@ function Auth({ setUser, setIsAuthenticated }) {
         <div class="ui vertical divider"></div>
       </div>
 
-      <div className="footer">
-      <div>Furbaby Sitters Club   | //Flatiron School</div>   
-        <div>Created By: Beth Fekadu| GitHub: <a href="https://github.com/8eth">Beth</a></div>
-      </div>
+      <Footer/>
 
     </div>
   )
