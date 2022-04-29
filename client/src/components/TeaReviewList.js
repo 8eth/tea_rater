@@ -9,7 +9,7 @@ function TeaReviewList({ review }) {
                 <div className="column">
                     <i className="large user icon"></i>  
                     <h4>{review.user.username}</h4>
-                    <i className="large hand point right icon"></i>  
+                    <i className="large arrow alternate circle right icon"></i>  
                 </div>
 
                 <div className="column">
