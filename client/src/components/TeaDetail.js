@@ -44,16 +44,22 @@ function TeaDetail({ teas }) {
               <h3>Origin</h3>
               <h5>{tea.origin}</h5>
 
+              <p className="divider"></p>
+              <h3>Reviews</h3>
+
               {tea.reviews.map((review) => {
                 return (
-                  <TeaReviewList
-                    key = {review.id}
-                    review = {review}
-                  />
+                  <div className="ui segment">
+                    <TeaReviewList
+                      key = {review.id}
+                      review = {review}
+                    />
+                  </div>
                 )
               })}
 
             </div>
+            
           </div>
 
         </div>

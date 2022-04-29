@@ -56,4 +56,28 @@ Review.create(
     user_id: 1,
 )
 
+Review.create(
+    taste: 'So good', 
+    rating: 5,
+    recommend: true, 
+    tea_id: 1, 
+    user_id: 1,
+)
+
+Review.create(
+    taste: 'My fav', 
+    rating: 5,
+    recommend: true, 
+    tea_id: 1, 
+    user_id: 1,
+)
+
+Review.create(
+    taste: 'Not my favorite', 
+    rating: 1,
+    recommend: true, 
+    tea_id: 1, 
+    user_id: 1,
+)
+
 puts "Done seeding ✅ !"
