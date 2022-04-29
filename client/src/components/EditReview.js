@@ -1,10 +1,8 @@
 import React,{ useState } from 'react'
-import { useHistory } from "react-router-dom";
 
 function EditReview({ review }) {
+    // const [selectedReview, setSelectedReview] = useState(review)
     
-    let history = useHistory();
-
     const [formData, setFormData] = useState ({ 
         taste: review.taste,
         rating: review.rating,
@@ -32,10 +30,9 @@ function EditReview({ review }) {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(editedReview),
+            body: JSON.stringify(editedReview)
         })
-        // .then(setReviews)
-        history.push("/profile")
+        // .then(() => setSelectedReview(editedReview))
     }
 
     return (

@@ -82,6 +82,7 @@ function App() {
         <Route path="/profile">
             <UserPage 
               user={user}
+              reviews={user.reviews}
             />
         </Route>
 

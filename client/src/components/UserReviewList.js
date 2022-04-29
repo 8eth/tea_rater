@@ -2,23 +2,22 @@ import React, {useState} from 'react'
 import { Rating } from 'semantic-ui-react' 
 import EditReview from './EditReview'
 
-function UserReviewList({ review }) {
+function UserReviewList({ review, userReviews, setUserReviews }) {
   const [showEditForm, setShowEditForm] = useState(false)
-
-
-  // const deleteReview = (id) => {
-  //   fetch(`/reviews/${id}`, {
-  //     method: "DELETE",
-  //   }).then((r) => {
-  //     if (r.ok) {
-  //       setAppointments(appointments.filter((appointment) => appointment.id !== id));
-  //     }
-  //   });
-  // }
 
   function handleEditForm(e, showEditForm){
     e.stopPropagation()
     setShowEditForm(!showEditForm)
+  }
+
+  const deleteReview = (id) => {
+    fetch(`/reviews/${id}`, {
+      method: "DELETE",
+    }).then((r) => {
+      if (r.ok) {
+        setUserReviews(userReviews.filter((review) => review.id !== id));
+      }
+    });
   }
 
   return (
@@ -48,9 +47,9 @@ function UserReviewList({ review }) {
             Edit
           </button>
 
-          <button className="ui small red basic button">
+          <button className="ui small red basic button" onClick={(e)=> deleteReview(review.id)}>
             <i className="large trash icon"></i>  
-            <a className="a" href={review.tea.shop}>Delete</a>
+            Delete
           </button>
 
           {showEditForm && <EditReview review={review} />}

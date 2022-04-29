@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2022_04_28_224603) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
-    t.string "bio", default: "Still working on my Bio!"
+    t.string "bio"
     t.string "picture", default: "https://images.pexels.com/photos/1561020/pexels-photo-1561020.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
