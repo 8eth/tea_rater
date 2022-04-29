@@ -24,7 +24,7 @@ function TeaCard({ tea, reviews }) {
 
           <button className="ui button">
             <i className="shopping cart icon"></i>  
-              <a href={tea.shop}>Shop</a>
+              <a className="a" href={tea.shop}>Shop</a>
           </button>
         </div>
          
