@@ -7,7 +7,7 @@ puts "Making Users 👤 ..."
 User.create(
     username:'beth', 
     password:'pass', 
-    bio:'',
+    bio:'Here is my bio ...',
     picture: 'https://images.pexels.com/photos/1561020/pexels-photo-1561020.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 )
 

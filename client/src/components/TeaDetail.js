@@ -30,7 +30,6 @@ function TeaDetail({ teas }) {
 
           <div className="detail-container">
            
-
             <h2>{tea.name}</h2>
             <p className="divider"></p>
             <br/>
