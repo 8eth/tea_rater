@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
 
-function TeaCard({ tea }) {
+function TeaCard({ tea, reviews }) {
   
   return (
     <div className='center aligned cards'>
@@ -18,19 +18,15 @@ function TeaCard({ tea }) {
             activeStyle={{
               background: "#E6E6E8",
             }}>
-            <i class="coffee icon"></i>  
+            <i className="coffee icon"></i>  
             Details
           </NavLink>
 
           <button className="ui button">
-            <i class="shopping cart icon"></i>  
+            <i className="shopping cart icon"></i>  
               <a href={tea.shop}>Shop</a>
           </button>
         </div>
-
-        <ul>
-          <li>{tea.reviews.taste}</li>
-        </ul>
          
       </div>
       <br></br>
