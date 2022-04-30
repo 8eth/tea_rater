@@ -2,7 +2,7 @@
 
   resources :teas  
   resources :reviews
-  resources :users, except: [:update, :destroy]
+  resources :users, except: [:destroy]
 
   get "/authorize", to: "users#show"
   post "/signup", to: "users#create"

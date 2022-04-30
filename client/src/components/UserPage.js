@@ -1,8 +1,15 @@
 import React, {useState} from 'react'
 import UserReviewList from './UserReviewList'
+import EditBio from './EditBio'
 
 function UserPage({ user, reviews }) {
   const [userReviews, setUserReviews] = useState(reviews)
+  const [showEditForm, setShowEditForm] = useState(false)
+
+  function handleEditForm(e, showEditForm){
+    e.stopPropagation()
+    setShowEditForm(!showEditForm)
+  }
 
   return (
 
@@ -14,6 +21,15 @@ function UserPage({ user, reviews }) {
       <h2>@{user.username}</h2>
       <p className="divider"></p>
       <h4>{user.bio}</h4>
+
+      <button className="ui small black basic button" onClick={(e) => handleEditForm(e, showEditForm)}>
+        <i className="large edit icon"></i>  
+        Edit Bio
+      </button>
+      <br></br>
+      <br></br>
+      {showEditForm && <EditBio user={user} />}
+
       <p className="divider"></p>
 
 
@@ -30,6 +46,8 @@ function UserPage({ user, reviews }) {
           </div>
         )
       })}
+
+
   
     </div>
   )
