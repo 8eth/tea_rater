@@ -1,12 +1,12 @@
 import React,{ useState } from 'react'
 
-function EditReview({ review }) {
-    // const [selectedReview, setSelectedReview] = useState(review)
+function EditReview({ review, userReviews, setUserReviews }) {
     
     const [formData, setFormData] = useState ({ 
         taste: review.taste,
         rating: review.rating,
-        recommend: review.recommend ? "Yes" : "No"
+        recommend: review.recommend
+        // recommend: review.recommend ? "Yes" : "No"
     })
 
     function handleChange(e) {
@@ -32,7 +32,11 @@ function EditReview({ review }) {
             },
             body: JSON.stringify(editedReview)
         })
-        // .then(() => setSelectedReview(editedReview))
+        // .then((r) => {
+        //     if (r.ok) {
+        //         (setUserReviews(editedReview))
+        //     }
+        // });
     }
 
     return (

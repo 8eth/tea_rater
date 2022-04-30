@@ -43,7 +43,7 @@ function AddReview({ teaReviews, setTeaReviews, user, tea }) {
       })
       .then((r) => {
           if (r.ok) {
-            r.json().then((teaReviews) => onCreateReview(teaReviews)); //check this
+            r.json().then((teaReviews) => onCreateReview(teaReviews));
         } else {
             r.json().then((err) => setErrors(err.errors));
         } 

@@ -2,8 +2,9 @@ import React, {useState} from 'react'
 import UserReviewList from './UserReviewList'
 import EditBio from './EditBio'
 
-function UserPage({ user, reviews }) {
-  const [userReviews, setUserReviews] = useState(reviews)
+function UserPage({ user }) {
+  const [userReviews, setUserReviews] = useState(user.reviews)
+  const [userBio, setUserBio] = useState(user.bio)
   const [showEditForm, setShowEditForm] = useState(false)
 
   function handleEditForm(e, showEditForm){
@@ -28,17 +29,22 @@ function UserPage({ user, reviews }) {
       </button>
       <br></br>
       <br></br>
-      {showEditForm && <EditBio key={user.id} user={user} />}
+      {showEditForm && 
+        <EditBio 
+          key={user.id} 
+          user={user}
+          userBio={userBio} 
+          setUserBio={setUserBio}
+        />
+      }
 
       <p className="divider"></p>
 
-
-      {user.reviews.map((review) => {
+      {userReviews.map((review) => {
         return (
           <div className="ui segment">
             <UserReviewList
-              user = {user}
-              key = {user.id}
+              key = {review.id}
               review = {review}
               userReviews={userReviews}
               setUserReviews = {setUserReviews}

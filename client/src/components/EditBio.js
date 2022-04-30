@@ -1,9 +1,7 @@
 import React,{ useState } from 'react'
 
-function EditBio({ user }) {
-
-    const [bio, setBio] = useState(user.bio)
-    // console.log(bio)
+function EditBio({ user, userBio, setUserBio }) {
+    // console.log(userBio)
 
     const [formData, setFormData] = useState ({ 
         bio: user.bio
@@ -30,7 +28,7 @@ function EditBio({ user }) {
             },
             body: JSON.stringify({bio: editedBio})
         })
-        .then(setBio(editedBio))
+        .then(setUserBio(editedBio))
         // .then(console.log(editedBio))
     }
 
