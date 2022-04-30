@@ -13,6 +13,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
   const [teas, setTeas] = useState([]);
+  // const [reviews, setReviews] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
@@ -36,6 +37,12 @@ function App() {
     .then((r) => r.json())
     .then(setTeas)
   }, [])
+
+  // useEffect(() => {
+  //   fetch("/reviews")
+  //   .then((r) => r.json())
+  //   .then(setReviews)
+  // }, [])
 
   const searchedTeas = teas.filter ((tea) => 
     tea.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -76,6 +83,9 @@ function App() {
         <Route path="/teas/:id">
             <TeaDetail 
               teas={teas}
+              user={user}
+              // reviews={reviews}
+              // setReviews={setReviews}
             />
         </Route>
 

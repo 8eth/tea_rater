@@ -1,10 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {useParams} from "react-router-dom"; 
 import TeaReviewList from "./TeaReviewList"
+import AddReview from "./AddReview"
 
-function TeaDetail({ teas }) {
+function TeaDetail({ teas, user }) {
   let {id} = useParams()
   let tea = teas[parseInt(id)-1] //    replace with find by id
+
+  const [teaReviews, setTeaReviews] = useState(tea.reviews)
+  const [showEditForm, setShowEditForm] = useState(false)
+
+  function handleEditForm(e, showEditForm){
+    e.stopPropagation()
+    setShowEditForm(!showEditForm)
+  }
 
   if (tea === undefined) {
     return (<div>loading</div>)
@@ -23,6 +32,24 @@ function TeaDetail({ teas }) {
               <i className="shopping large cart icon"></i>  
               <a className="a" href={tea.shop}> BUY IT FROM THE RETAILER </a>
             </button>
+
+            <button className="ui button" onClick={(e) => handleEditForm(e, showEditForm)}>
+              <i className="large edit icon"></i>  
+              Add a Review
+            </button>
+
+            {showEditForm && 
+              <AddReview
+                teaReviews={teaReviews}
+                setTeaReviews={setTeaReviews}
+                user={user}
+                tea={tea}
+              />
+            }
+
+            <br></br>
+            <br></br>
+
           </div>
 
           <div className="detail-container">
@@ -50,7 +77,7 @@ function TeaDetail({ teas }) {
               <p className="divider"></p>
               <h3>Reviews</h3>
 
-              {tea.reviews.map((review) => {
+              {teaReviews.map((review) => {
                 return (
                   <div className="ui segment">
                     <TeaReviewList

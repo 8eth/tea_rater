@@ -52,7 +52,7 @@ function UserReviewList({ review, userReviews, setUserReviews }) {
             Delete
           </button>
 
-          {showEditForm && <EditReview review={review} />}
+          {showEditForm && <EditReview key={review.id} review={review} />}
 
         </div> 
       </div>

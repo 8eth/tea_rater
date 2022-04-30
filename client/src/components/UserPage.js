@@ -28,7 +28,7 @@ function UserPage({ user, reviews }) {
       </button>
       <br></br>
       <br></br>
-      {showEditForm && <EditBio user={user} />}
+      {showEditForm && <EditBio key={user.id} user={user} />}
 
       <p className="divider"></p>
 
@@ -38,7 +38,7 @@ function UserPage({ user, reviews }) {
           <div className="ui segment">
             <UserReviewList
               user = {user}
-              key = {review.id}
+              key = {user.id}
               review = {review}
               userReviews={userReviews}
               setUserReviews = {setUserReviews}

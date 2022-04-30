@@ -6,7 +6,7 @@ function EditReview({ review }) {
     const [formData, setFormData] = useState ({ 
         taste: review.taste,
         rating: review.rating,
-        recommend: review.recommend
+        recommend: review.recommend ? "Yes" : "No"
     })
 
     function handleChange(e) {
@@ -61,7 +61,7 @@ function EditReview({ review }) {
             </div>
             <div className="form-row">
                 <div className="form-group col-7">
-                    <label>Recommend?</label>
+                    <label>Recommend? </label>
                     <input 
                         name="recommend" 
                         type="text" 
