@@ -32,11 +32,11 @@ function EditReview({ review, userReviews, setUserReviews }) {
             },
             body: JSON.stringify(editedReview)
         })
-        // .then((r) => {
-        //     if (r.ok) {
-        //         (setUserReviews(editedReview))
-        //     }
-        // });
+        .then(response => response.json())
+        .then(editedReview => {
+            const updatedReviews = userReviews.map(review => review.id === editedReview.id ? editedReview : review) 
+            setUserReviews(updatedReviews)
+        })
     }
 
     return (

@@ -1,7 +1,7 @@
 import React,{ useState } from 'react'
 
 function EditBio({ user, userBio, setUserBio }) {
-    // console.log(userBio)
+    console.log(userBio)
 
     const [formData, setFormData] = useState ({ 
         bio: user.bio
@@ -20,16 +20,17 @@ function EditBio({ user, userBio, setUserBio }) {
         const editedBio = {
             bio: formData.bio
         }
+        // const editedBio = formData.bio
 
         fetch(`/users/${user.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({bio: editedBio})
+            body: JSON.stringify({userBio: editedBio})
         })
-        .then(setUserBio(editedBio))
-        // .then(console.log(editedBio))
+        .then(response => response.json())
+        .then(setUserBio((userBio) => editedBio))
     }
 
     return (

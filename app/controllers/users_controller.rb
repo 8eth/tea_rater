@@ -18,8 +18,8 @@ class UsersController < ApplicationController
     end
 
     def update
-        @user.update!(user_params_for_update)
-        render json: user
+        @user.update!(user_params)
+        render json: @user
     end
 
     private
@@ -31,9 +31,4 @@ class UsersController < ApplicationController
     def user_params
         params.permit(:username, :password, :password_confirmation, :bio, :picture)
     end
-
-    def user_params_for_update
-        params.permit(:bio)
-    end
-
 end

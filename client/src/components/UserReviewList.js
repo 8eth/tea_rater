@@ -10,14 +10,17 @@ function UserReviewList({ review, userReviews, setUserReviews }) {
     setShowEditForm(!showEditForm)
   }
 
-  const deleteReview = (id) => {
-    fetch(`/reviews/${id}`, {
+  const deleteReview = (review) => {
+    fetch(`/reviews/${review.id}`, {
       method: "DELETE",
-    }).then((r) => {
-      if (r.ok) {
-        setUserReviews(userReviews.filter((review) => review.id !== id));
-      }
-    });
+    })
+    const newReviews = userReviews.filter(UserReviewId => UserReviewId !== review)
+    setUserReviews(newReviews)
+  }
+
+  function handleDelete(e){
+    e.stopPropagation()
+    deleteReview(review)
   }
 
   return (
@@ -38,7 +41,7 @@ function UserReviewList({ review, userReviews, setUserReviews }) {
 
         <div className="column">
           <h5>{review.taste}</h5>
-          <h5><Rating icon="star" defaultRating={review.rating} maxRating={5} disabled/></h5>
+          <h5><Rating icon="star" rating={review.rating} maxRating={5} disabled/></h5>
           <h5>Recommend? {review.recommend ? "Yes ✅ " : "No ❌ " }</h5>
           <br></br>
 
@@ -47,7 +50,7 @@ function UserReviewList({ review, userReviews, setUserReviews }) {
             Edit
           </button>
 
-          <button className="ui small red basic button" onClick={(e)=> deleteReview(review.id)}>
+          <button className="ui small red basic button" onClick={e => handleDelete(e)}>
             <i className="large trash icon"></i>  
             Delete
           </button>

@@ -17,7 +17,7 @@ class TeasController < ApplicationController
 
     def update
         @tea.update!(tea_params)
-        render json: tea
+        render json: @tea
     end
 
     def destroy
