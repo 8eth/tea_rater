@@ -26,9 +26,9 @@ function Login({ setUser, setIsAuthenticated }) {
             setUser(username)
             setIsAuthenticated(true)
           })
-        } else {
-          res.json()
-          .then((err) => setErrors(err.errors))
+        // } else {
+        //   res.json()
+        //   .then((err) => setErrors(err.errors))
         }
     })
   }
