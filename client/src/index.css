@@ -20,10 +20,25 @@ body {
 }
 
 .container {
-  /* margin: 40px; */
-  /* padding: 20px; */
   border-color: lightgray;
 }
+
+.map-container {
+  margin-left: 15px;
+  padding: 20px;
+  text-align: center; 
+  border-color: lightgray;
+  max-width: 500px;
+  max-height: 1000px;
+}
+
+/* .map-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+} */
 
 .detail-container {
   margin-right: 100px;

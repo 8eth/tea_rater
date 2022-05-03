@@ -45,6 +45,16 @@ function NavBar({ setIsAuthenticated, setUser }) {
             }}>
             ALL TEAS
           </NavLink> 
+{/* 
+          <NavLink
+            to="/map"
+            exact
+            className="ui center floated button"
+            activeStyle={{
+              background: "#E6E6E8",
+            }}>
+            TEA MAP
+          </NavLink>  */}
 
           <NavLink
             to="/profile"

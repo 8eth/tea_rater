@@ -7,6 +7,7 @@ import TeaList from "./components/TeaList"
 import TeaDetail from "./components/TeaDetail"
 import UserPage from "./components/UserPage"
 import Footer from "./components/Footer"
+import Map from "./components/Map"
 
 function App() {
 
@@ -71,6 +72,10 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
+
+        {/* <Route path="/map">
+          <Map />
+        </Route> */}
 
         <Route exact path="/teas">
           <TeaList 

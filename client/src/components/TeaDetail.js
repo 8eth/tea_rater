@@ -2,10 +2,11 @@ import React, {useState} from 'react'
 import {useParams} from "react-router-dom"; 
 import TeaReviewList from "./TeaReviewList"
 import AddReview from "./AddReview"
+import Map from "./Map"
 
 function TeaDetail({ teas, user }) {
   let {id} = useParams()
-  let tea = teas[parseInt(id)-1] //    replace with find by id
+  let tea = teas.find(tea => tea.id == id)
 
   const [teaReviews, setTeaReviews] = useState(tea.reviews)
   const [showEditForm, setShowEditForm] = useState(false)
@@ -49,6 +50,10 @@ function TeaDetail({ teas, user }) {
 
             <br></br>
             <br></br>
+         
+            <div>            
+              <Map />
+            </div>
 
           </div>
 
@@ -71,6 +76,7 @@ function TeaDetail({ teas, user }) {
                     <h3>Origin</h3>
                     <h5>{tea.origin}</h5>
                   </div>
+             
                  
                 </div>
               </div>
@@ -94,6 +100,8 @@ function TeaDetail({ teas, user }) {
 
         </div>
       </div>
+
+     
 
     </div>
   )
