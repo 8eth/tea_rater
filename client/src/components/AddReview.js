@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 
 function AddReview({ teaReviews, setTeaReviews, user, tea }) {
-    // console.log(teaReviews)
     const [errors, setErrors] = useState([]);
 
     const [formData, setFormData] = useState({
