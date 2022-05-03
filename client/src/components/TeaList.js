@@ -4,7 +4,12 @@ import Search from './Search'
 // import Map from "./Map"
 
 function TeaList({ teas, searchTerm, onChangeSearch}) {
-    const mappedTeas = teas.map((tea) =>
+
+    const searchedTeas = teas.filter ((tea) => 
+        tea.name.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+
+    const mappedTeas = searchedTeas.map((tea) =>
         <TeaCard
             key={tea.id}
             tea={tea}
