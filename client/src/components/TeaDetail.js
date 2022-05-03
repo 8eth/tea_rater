@@ -48,9 +48,6 @@ function TeaDetail({ teas, user }) {
               />
             }
 
-            <br></br>
-            <br></br>
-         
             <div>            
               <Map />
             </div>

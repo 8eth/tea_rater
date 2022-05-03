@@ -7,8 +7,7 @@ class CreateTeas < ActiveRecord::Migration[6.1]
       t.string :ingredients
       t.string :shop
       t.string :origin
-      # t.float :origin_latitude
-      # t.float :origin_longitude
+      t.float :LngLat
       t.timestamps
     end
   end

@@ -19,8 +19,7 @@ Tea.create(
     ingredients: "Ceylon Dimbula, Uva and Indian Assam full leaf teas and natural bergamot flavor.",
     shop: "https://www.smithtea.com/collections/all-tea/products/lord-bergamot",
     origin: "Italy",
-    # origin_latitude: -73.990593,
-    # origin_longitude: 40.740121,
+    LngLat: [12.56738, 41.87194],
 )
 
 Tea.create(
@@ -30,8 +29,7 @@ Tea.create(
     ingredients: "Egyptian chamomile, South African rooibos, fragrant hyssop, linden flowers, lemon myrtle, rose petals, safflower, cyani flowers and natural flavors.",
     shop: "https://www.smithtea.com/collections/all-tea/products/meadow",
     origin: "Egypt",
-    # origin_latitude: -73.990593,
-    # origin_longitude: 40.740121,
+    LngLat: [30.802498, 26.820553],
 )
 
 Tea.create(
@@ -41,8 +39,7 @@ Tea.create(
     ingredients: "Ceylon and Zheng Shan black teas, French lavender, red rose petals, black currant and vanilla natural flavor.",
     shop: "https://www.smithtea.com/collections/all-tea/products/black-lavender",
     origin: "Sri Lanka",
-    # origin_latitude: -73.990593,
-    # origin_longitude: 40.740121,
+    LngLat: [80.771797, 7.873054],
 )
 
 Tea.create(
@@ -52,8 +49,7 @@ Tea.create(
     ingredients: "Hibiscus flowers, Indian sarsaparilla root, ginger root, natural flavors, rose petals, elderflowers and lemon myrtle.",
     shop: "https://www.smithtea.com/collections/all-tea/products/big-hibiscus",    
     origin: "Bulgaria",
-    # origin_latitude: -73.990593,
-    # origin_longitude: 40.740121,
+    LngLat: [25.48583, 42.733883],
 )
 
 puts "Making Reviews 🤔 ..."
