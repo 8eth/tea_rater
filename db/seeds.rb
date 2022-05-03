@@ -19,8 +19,8 @@ Tea.create(
     ingredients: "Ceylon Dimbula, Uva and Indian Assam full leaf teas and natural bergamot flavor.",
     shop: "https://www.smithtea.com/collections/all-tea/products/lord-bergamot",
     origin: "Italy",
-    origin_latitude: 61.86759,
-    origin_longitude: 35.5760,
+    origin_latitude: 60.86759,
+    origin_longitude: 32.5760,
     # LngLat: [12.56738, 41.87194],
 )
 
@@ -31,8 +31,8 @@ Tea.create(
     ingredients: "Egyptian chamomile, South African rooibos, fragrant hyssop, linden flowers, lemon myrtle, rose petals, safflower, cyani flowers and natural flavors.",
     shop: "https://www.smithtea.com/collections/all-tea/products/meadow",
     origin: "Egypt",
-    origin_latitude: 51.36759,
-    origin_longitude: 52.5760,
+    origin_latitude: 50.36759,
+    origin_longitude: 50.5760,
     # LngLat: [30.802498, 26.820553],
 )
 
@@ -42,10 +42,10 @@ Tea.create(
     description: "A glorious bouquet of delicate French lavender paired with exquisite black Ceylon and lapsang souchong teas, fruity black currant and sweet vanilla. Handcrafted with great joie de vivre in the Smith atelier.",
     ingredients: "Ceylon and Zheng Shan black teas, French lavender, red rose petals, black currant and vanilla natural flavor.",
     shop: "https://www.smithtea.com/collections/all-tea/products/black-lavender",
-    origin: "Sri Lanka",
-    origin_latitude: 7.873054,
-    origin_longitude: 80.771797,
-    # LngLat: [80.771797, 7.873054],
+    origin: "Turkey",
+    origin_latitude: 58.36759,
+    origin_longitude: 54.5760,
+    # LngLat: [80.771797, 7.873054] sir lanka,
 )
 
 Tea.create(
@@ -55,8 +55,8 @@ Tea.create(
     ingredients: "Hibiscus flowers, Indian sarsaparilla root, ginger root, natural flavors, rose petals, elderflowers and lemon myrtle.",
     shop: "https://www.smithtea.com/collections/all-tea/products/big-hibiscus",    
     origin: "Bulgaria",
-    origin_latitude: 42.733883,
-    origin_longitude: 25.48583,
+    origin_latitude: 60.36759,
+    origin_longitude: 45.5760,
     # LngLat: [25.48583, 42.733883],
 )
 
@@ -73,7 +73,7 @@ Review.create(
     taste: 'So good', 
     rating: 5,
     recommend: true, 
-    tea_id: 1, 
+    tea_id: 2, 
     user_id: 1,
 )
 
@@ -81,7 +81,7 @@ Review.create(
     taste: 'My fav', 
     rating: 5,
     recommend: true, 
-    tea_id: 1, 
+    tea_id: 3, 
     user_id: 1,
 )
 
@@ -89,7 +89,7 @@ Review.create(
     taste: 'Not my favorite', 
     rating: 1,
     recommend: false, 
-    tea_id: 1, 
+    tea_id: 4, 
     user_id: 1,
 )
 

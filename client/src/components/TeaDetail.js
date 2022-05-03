@@ -49,7 +49,7 @@ function TeaDetail({ teas, user }) {
               />
             }
 
-            <div>            
+            <div>      
               <Map 
                 key={user.id}
                 tea={tea}
@@ -90,6 +90,10 @@ function TeaDetail({ teas, user }) {
 
                     <h3>Origin</h3>
                     <h5>{tea.origin}</h5>
+                    {/* <Map 
+                      key={user.id}
+                      tea={tea}
+                    /> */}
                   </div>
              
                  

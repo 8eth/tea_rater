@@ -29,8 +29,9 @@ body {
   text-align: center; 
   width: 450px;
   height: 250px;
+  /* display: flex; */
 }
-
+  
 .detail-container {
   margin-right: 100px;
   padding-top: 40px;
