@@ -52,7 +52,6 @@ function EditBio({ user, userBio, setUserBio }) {
             <br></br>
             <br></br>
 
-
         </form>
     )
 }
