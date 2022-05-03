@@ -26,9 +26,9 @@ function Login({ setUser, setIsAuthenticated }) {
             setUser(username)
             setIsAuthenticated(true)
           })
-        // } else {
-        //   res.json()
-        //   .then((err) => setErrors(err.errors))
+        } else {
+          res.json()
+          .then((err) => setErrors(err.errors))
         }
     })
   }
@@ -68,8 +68,6 @@ function Login({ setUser, setIsAuthenticated }) {
               ))}
             </div>
             <br></br>
-            {/* <button className="ui submit button center" type="submit">Login</button> */}
-
             <button className="ui primary labeled icon button" type="submit">
               <i className="unlock alternate icon"></i>
               Login
