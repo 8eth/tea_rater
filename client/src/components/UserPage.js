@@ -21,12 +21,12 @@ function UserPage({ user }) {
       </div>
       <h2>@{user.username}</h2>
       <p className="divider"></p>
-      <h4>{user.bio}</h4>
+      {/* <h4>{user.bio}</h4>
 
       <button className="ui small black basic button" onClick={(e) => handleEditForm(e, showEditForm)}>
         <i className="large edit icon"></i>  
         Edit Bio
-      </button>
+      </button> */}
       <br></br>
       <br></br>
       {showEditForm && 
