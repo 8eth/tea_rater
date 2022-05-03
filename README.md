@@ -4,17 +4,13 @@ This application is used to leave and view reviews on a list of teas.
 
 ## Front End
 
-The front-end of the website is built using React. `npm start --prefix client` runs the app in the development mode.
-
-Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
+The front-end of the website is built using React. `npm start --prefix client` runs the app in the development mode. Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
 
 <!-- ![Components](./client/public/images/Components.png) -->
 
 ## Back End
 
-The back-end of the website is built using Ruby on Rails. `rails db:create db:migrate db:seed` then run `rails s` to run the back-end of the app in the development mode.
-
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The back-end of the website is built using Ruby on Rails. `rails db:create db:migrate db:seed` then run `rails s` to run the back-end of the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 <!-- ![ERD](./client/public/images/ERD.png) -->
 
 ## User Stories
