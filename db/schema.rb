@@ -32,8 +32,10 @@ ActiveRecord::Schema.define(version: 2022_04_28_224603) do
     t.string "image"
     t.string "description"
     t.string "ingredients"
-    t.string "origin"
     t.string "shop"
+    t.string "origin"
+    t.float "origin_latitude"
+    t.float "origin_longitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

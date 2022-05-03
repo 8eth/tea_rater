@@ -32,7 +32,7 @@ class TeasController < ApplicationController
     end
     
     def tea_params
-        params.permit(:name, :image, :description, :ingredients, :origin)
+        params.permit(:name, :image, :description, :ingredients, :origin, :origin_latitude, :origin_longitude)
     end
 
 end

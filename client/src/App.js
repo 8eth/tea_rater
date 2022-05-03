@@ -7,7 +7,7 @@ import TeaList from "./components/TeaList"
 import TeaDetail from "./components/TeaDetail"
 import UserPage from "./components/UserPage"
 import Footer from "./components/Footer"
-import Map from "./components/Map"
+// import Map from "./components/Map"
 
 function App() {
 

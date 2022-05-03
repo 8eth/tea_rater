@@ -25,12 +25,10 @@ body {
 
 .map-container {
   margin-left: 15px;
-  padding-top: 0px;
   padding: 20px;
   text-align: center; 
-  border-color: lightgray;
-  max-width: 500px;
-  max-height: 1000px;
+  width: 450px;
+  height: 250px;
 }
 
 .detail-container {

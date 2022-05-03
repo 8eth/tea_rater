@@ -41,6 +41,7 @@ function TeaDetail({ teas, user }) {
 
             {showEditForm && 
               <AddReview
+                key={user.id}
                 teaReviews={teaReviews}
                 setTeaReviews={setTeaReviews}
                 user={user}
@@ -49,8 +50,25 @@ function TeaDetail({ teas, user }) {
             }
 
             <div>            
-              <Map />
+              <Map 
+                key={user.id}
+                tea={tea}
+              />
             </div>
+            
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+
 
           </div>
 
