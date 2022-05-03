@@ -29,7 +29,7 @@ The application allows the user to
   * Edit a review left on on a tea
   * Delete a review left on a tea
   * View profile details and all reviews left on different teas on one page
-  * Get routed to a shop if they want to purchase the tea
+  * Get routed to a shop to purchase the tea
 
 ## Styling
 
@@ -37,7 +37,7 @@ This application uses the following for styling
   * Semantic UI
   * Custom css
   * MapBox
-  * Photos from (https://www.smithtea.com/)
+  * Photos from ![Smith Tea](https://www.smithtea.com/)
 
 ## Author
 
