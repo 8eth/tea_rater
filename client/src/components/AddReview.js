@@ -42,13 +42,6 @@ function AddReview({ teaReviews, setTeaReviews, user, tea }) {
     })
     .then(response => response.json())
     .then((teaReviews) => onCreateReview(teaReviews))
-    // .then((r) => {
-    //     if (r.ok) {
-    //       r.json().then((teaReviews) => onCreateReview(teaReviews));
-    //   } else {
-    //       r.json().then((err) => setErrors(err.errors));
-    //   } 
-    // })
     .then(setFormData(initialFormState));
   }
 

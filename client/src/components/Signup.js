@@ -100,7 +100,6 @@ import React, { useState } from 'react'
               />
               <br></br>
               <br></br>
-              {/* <button className="ui submit button center" type="submit">Sign Up</button> */}
 
               <button className="ui primary labeled icon button" type="submit">
                 <i className="signup icon"></i>

@@ -37,7 +37,6 @@ function TeaDetail({ teas, user }) {
             <div className="ui extra large image">
               <img src={tea.image} alt={tea.name}/>
               <h3>Tea Origin</h3>
-              {/* <h5>{tea.origin}</h5>  */}
             </div>
 
             <div className="center-content">

@@ -45,7 +45,6 @@ body {
 .form-border  {
   margin: 20px;
   padding: 20px;
-  /* border-style: dotted; */
   border-color: lightgray;
 }
 
@@ -120,7 +119,6 @@ body {
 
 h2 {
   color: rgb(89, 116, 8);
-  /* color: teal; */
 }
 
 h3 {

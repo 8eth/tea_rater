@@ -30,7 +30,6 @@ function UserReviewList({ review, userReviews, setUserReviews }) {
         <div className="column">
           <i className="large coffee icon"></i>  
           <h4>{review.tea.name}</h4>
-          {/* <img scr={review.tea.image} alt={review.tea.name}/> */}
           <p>Ingredients: {review.tea.ingredients}</p>
           <p>Origin: {review.tea.origin}</p>
           <button className="ui small black basic button">
