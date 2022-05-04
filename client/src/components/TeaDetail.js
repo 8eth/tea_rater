@@ -18,7 +18,8 @@ function TeaDetail({ teas, user }) {
 
   if (tea === undefined) {
     return (<div>loading</div>)
-  }
+    // console.log("tea is undefined")
+  } 
 
   return (
     <div >
