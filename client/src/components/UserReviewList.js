@@ -60,6 +60,8 @@ function UserReviewList({ review, userReviews, setUserReviews }) {
               review={review} 
               userReviews={userReviews}
               setUserReviews={setUserReviews}
+              showEditForm={showEditForm}
+              setShowEditForm={setShowEditForm}
             />
           }
 

@@ -1,6 +1,6 @@
 import React,{ useState } from 'react'
 
-function EditBio({ user, userBio, setUserBio }) {
+function EditBio({ user, userBio, setUserBio, showEditForm, setShowEditForm }) {
     console.log(userBio)
 
     const [formData, setFormData] = useState ({ 
@@ -31,6 +31,7 @@ function EditBio({ user, userBio, setUserBio }) {
         })
         .then(response => response.json())
         .then(setUserBio((userBio) => editedBio))
+        .then(setShowEditForm(!showEditForm))
     }
 
     return (

@@ -35,6 +35,8 @@ function UserPage({ user }) {
           user={user}
           userBio={userBio} 
           setUserBio={setUserBio}
+          showEditForm={showEditForm}
+          setShowEditForm={setShowEditForm}
         />
       }
 

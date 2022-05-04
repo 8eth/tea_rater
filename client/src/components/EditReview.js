@@ -1,6 +1,6 @@
 import React,{ useState } from 'react'
 
-function EditReview({ review, userReviews, setUserReviews }) {
+function EditReview({ review, userReviews, setUserReviews, showEditForm, setShowEditForm }) {
     
     const [formData, setFormData] = useState ({ 
         taste: review.taste,
@@ -37,6 +37,7 @@ function EditReview({ review, userReviews, setUserReviews }) {
             const updatedReviews = userReviews.map(review => review.id === editedReview.id ? editedReview : review) 
             setUserReviews(updatedReviews)
         })
+        .then(setShowEditForm(!showEditForm))
     }
 
     return (
