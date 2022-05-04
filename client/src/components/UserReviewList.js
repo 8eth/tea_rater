@@ -10,6 +10,10 @@ function UserReviewList({ review, userReviews, setUserReviews }) {
     setShowEditForm(!showEditForm)
   }
 
+  const handleClickTeaShop = () => {
+    window.open(review.tea.shop);
+  }
+
   const deleteReview = (review) => {
     fetch(`/reviews/${review.id}`, {
       method: "DELETE",
@@ -28,17 +32,21 @@ function UserReviewList({ review, userReviews, setUserReviews }) {
       <div className="ui two column small grid">
 
         <div className="column">
+
           <i className="large coffee icon"></i>  
           <h4>{review.tea.name}</h4>
           <p>Ingredients: {review.tea.ingredients}</p>
           <p>Origin: {review.tea.origin}</p>
-          <button className="ui small black basic button">
-            <i className="shopping large cart icon"></i>  
-            <a className="a" href={review.tea.shop}> Shop </a>
+
+          <button className="ui black basic button" onClick={handleClickTeaShop}>
+            <i className="shopping cart icon"></i>  
+            Shop
           </button>
+
         </div>
 
         <div className="column">
+          
           <h5>{review.taste}</h5>
           <h5><Rating icon="star" rating={review.rating} maxRating={5} disabled/></h5>
           <h5>Recommend? {review.recommend ? "Yes ✅ " : "No ❌ " }</h5>
