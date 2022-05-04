@@ -24,12 +24,12 @@ body {
 }
 
 .map-container {
-  margin-left: 15px;
-  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 40px;
   text-align: center; 
-  width: 450px;
+  width: 480px;
   height: 250px;
-  /* display: flex; */
+  display: flex;
 }
   
 .detail-container {

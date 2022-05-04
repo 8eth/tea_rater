@@ -27,30 +27,14 @@ function TeaDetail({ teas, user }) {
         <div className="item">
         
           <div>
+
             <div className="ui extra large image">
               <img src={tea.image} alt={tea.name}/>
+              <h3>Tea Origin</h3>
+              <h5>{tea.origin}</h5> 
             </div>
-            <button className="ui button">
-              <i className="shopping large cart icon"></i>  
-              <a className="a" href={tea.shop}> BUY IT FROM THE RETAILER </a>
-            </button>
 
-            <button className="ui button" onClick={(e) => handleEditForm(e, showEditForm)}>
-              <i className="large edit icon"></i>  
-              Add a Review
-            </button>
-
-            {showEditForm && 
-              <AddReview
-                key={user.id}
-                teaReviews={teaReviews}
-                setTeaReviews={setTeaReviews}
-                user={user}
-                tea={tea}
-              />
-            }
-
-            <div>      
+            <div className="center-content">
               <Map 
                 key={user.id}
                 tea={tea}
@@ -59,18 +43,6 @@ function TeaDetail({ teas, user }) {
             
             <br></br>
             <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-
-
           </div>
 
           <div className="detail-container">
@@ -89,14 +61,30 @@ function TeaDetail({ teas, user }) {
                     <h3>Ingredients</h3>
                     <h5>{tea.ingredients}</h5>
 
-                    <h3>Origin</h3>
-                    <h5>{tea.origin}</h5>
-                    {/* <Map 
-                      key={user.id}
-                      tea={tea}
-                    /> */}
-                  </div>
-             
+                    <br></br>
+                    <button className="ui button">
+                      <i className="shopping large cart icon"></i>  
+                      <a className="a" href={tea.shop}> BUY IT FROM THE RETAILER </a>
+                    </button>
+
+                    <button className="ui button" onClick={(e) => handleEditForm(e, showEditForm)}>
+                      <i className="large edit icon"></i>  
+                      Add a Review
+                    </button>
+                    <br></br>
+
+                    {showEditForm && 
+                      <AddReview
+                        key={user.id}
+                        teaReviews={teaReviews}
+                        setTeaReviews={setTeaReviews}
+                        user={user}
+                        tea={tea}
+                      />
+                    }
+                    <br></br>
+
+                  </div>             
                  
                 </div>
               </div>
@@ -120,9 +108,6 @@ function TeaDetail({ teas, user }) {
 
         </div>
       </div>
-
-     
-
     </div>
   )
 }

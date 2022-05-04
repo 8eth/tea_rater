@@ -6,8 +6,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmb
 const Map = ({ tea }) => {
   const mapContainerRef = useRef(null);
 
-  const [lng, setLng] = useState(18);
-  const [lat, setLat] = useState(37);
+  const [lng, setLng] = useState(tea.origin_longitude);
+  const [lat, setLat] = useState(tea.origin_latitude);
   const [zoom, setZoom] = useState(2.7);
 
   useEffect(() => {
@@ -33,12 +33,6 @@ const Map = ({ tea }) => {
  
     <div className="map-container">
         <div className='map-container' ref={mapContainerRef} />
-      <br></br>
-      <br></br>
-
-      {/* <div>
-          Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
-      </div> */}
     </div>
   );
 };
