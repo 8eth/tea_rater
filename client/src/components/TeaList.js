@@ -1,7 +1,6 @@
 import React from 'react'
 import TeaCard from './TeaCard'
 import Search from './Search'
-// import Map from "./Map"
 
 function TeaList({ teas, searchTerm, onChangeSearch}) {
 
@@ -29,9 +28,6 @@ function TeaList({ teas, searchTerm, onChangeSearch}) {
                 <div className="ui center aligned four wide row grid container">{mappedTeas}</div>
             </div>
 
-             {/* <div>            
-                <Map />
-            </div> */}
         </div>
     )
 }

@@ -2,6 +2,10 @@ import React from 'react'
 import { NavLink } from "react-router-dom";
 
 function TeaCard({ tea }) {
+
+  const handleClickTeaShop = () => {
+    window.open(tea.shop);
+  }
   
   return (
     <div className='center aligned cards'>
@@ -22,9 +26,9 @@ function TeaCard({ tea }) {
             Details
           </NavLink>
 
-          <button className="ui button">
+          <button className="ui button" onClick={handleClickTeaShop}>
             <i className="shopping cart icon"></i>  
-            <a className="a" href={tea.shop}>Shop</a>
+            Shop
           </button>
         </div>
          

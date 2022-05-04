@@ -1,12 +1,19 @@
 import React, {useState} from 'react'
-import {useParams} from "react-router-dom"; 
+import {useParams} from "react-router-dom";
 import TeaReviewList from "./TeaReviewList"
 import AddReview from "./AddReview"
 import Map from "./Map"
 
 function TeaDetail({ teas, user }) {
-  let {id} = useParams()
-  let tea = teas.find(tea => tea.id == id)
+  let { id } = useParams();
+  let tea = teas.find(tea => tea.id == id)    
+
+  // if (tea === undefined) {
+  //   // return (<div>loading</div>)
+  //   console.log("tea is undefined")
+  // } else {    
+  //   console.log("tea is defined")
+  // }
 
   const [teaReviews, setTeaReviews] = useState(tea.reviews)
   const [showEditForm, setShowEditForm] = useState(false)
@@ -16,10 +23,9 @@ function TeaDetail({ teas, user }) {
     setShowEditForm(!showEditForm)
   }
 
-  if (tea === undefined) {
-    return (<div>loading</div>)
-    // console.log("tea is undefined")
-  } 
+  const handleClickTeaShop = () => {
+    window.open(tea.shop);
+  }
 
   return (
     <div >
@@ -31,7 +37,7 @@ function TeaDetail({ teas, user }) {
             <div className="ui extra large image">
               <img src={tea.image} alt={tea.name}/>
               <h3>Tea Origin</h3>
-              <h5>{tea.origin}</h5> 
+              {/* <h5>{tea.origin}</h5>  */}
             </div>
 
             <div className="center-content">
@@ -60,11 +66,11 @@ function TeaDetail({ teas, user }) {
 
                     <h3>Ingredients</h3>
                     <h5>{tea.ingredients}</h5>
-
                     <br></br>
-                    <button className="ui button">
+     
+                    <button className="ui button" onClick={handleClickTeaShop}>
                       <i className="shopping large cart icon"></i>  
-                      <a className="a" href={tea.shop}> BUY IT FROM THE RETAILER </a>
+                      BUY IT FROM THE RETAILER
                     </button>
 
                     <button className="ui button" onClick={(e) => handleEditForm(e, showEditForm)}>
