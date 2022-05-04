@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function AddReview({ teaReviews, setTeaReviews, user, tea }) {
+function AddReview({ teaReviews, setTeaReviews, user, tea, showAddTeaForm, setShowAddTeaForm }) {
   const [errors, setErrors] = useState([]);
 
   const [formData, setFormData] = useState({
@@ -42,7 +42,8 @@ function AddReview({ teaReviews, setTeaReviews, user, tea }) {
     })
     .then(response => response.json())
     .then((teaReviews) => onCreateReview(teaReviews))
-    .then(setFormData(initialFormState));
+    .then(setFormData(initialFormState))
+    .then(setShowAddTeaForm(!showAddTeaForm))
   }
 
   function handleChange(e) {

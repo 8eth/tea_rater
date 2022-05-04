@@ -16,11 +16,11 @@ function TeaDetail({ teas, user }) {
   // }
 
   const [teaReviews, setTeaReviews] = useState(tea.reviews)
-  const [showEditForm, setShowEditForm] = useState(false)
+  const [showAddTeaForm, setShowAddTeaForm] = useState(false)
 
-  function handleEditForm(e, showEditForm){
+  function handleAddTeaForm(e, showAddTeaForm){
     e.stopPropagation()
-    setShowEditForm(!showEditForm)
+    setShowAddTeaForm(!showAddTeaForm)
   }
 
   const handleClickTeaShop = () => {
@@ -72,19 +72,21 @@ function TeaDetail({ teas, user }) {
                       BUY IT FROM THE RETAILER
                     </button>
 
-                    <button className="ui button" onClick={(e) => handleEditForm(e, showEditForm)}>
+                    <button className="ui button" onClick={(e) => handleAddTeaForm(e, showAddTeaForm)}>
                       <i className="large edit icon"></i>  
                       Add a Review
                     </button>
                     <br></br>
 
-                    {showEditForm && 
+                    {showAddTeaForm && 
                       <AddReview
                         key={user.id}
                         teaReviews={teaReviews}
                         setTeaReviews={setTeaReviews}
                         user={user}
                         tea={tea}
+                        showAddTeaForm={showAddTeaForm}
+                        setShowAddTeaForm={setShowAddTeaForm}
                       />
                     }
                     <br></br>
