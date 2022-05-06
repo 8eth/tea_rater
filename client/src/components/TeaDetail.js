@@ -6,7 +6,9 @@ import Map from "./Map"
 
 function TeaDetail({ teas, user }) {
   let { id } = useParams();
-  let tea = teas.find(tea => tea.id == id)    
+  let tea = teas.find(tea => tea.id == id)  
+  // let tea1 = teas.find(tea => tea.id == id)  
+
 
   // if (tea === undefined) {
   //   // return (<div>loading</div>)
@@ -14,6 +16,14 @@ function TeaDetail({ teas, user }) {
   // } else {    
   //   console.log("tea is defined")
   // }
+
+  // const [tea, setTea] = useState(tea1)
+  // if (tea === undefined) {
+  //   fetch("/teas")
+  //   .then((r) => r.json())
+  //   .then(setTeas)
+  //   .then(setTea(teas.find(tea => tea.id == id)))
+  // } 
 
   const [teaReviews, setTeaReviews] = useState(tea.reviews)
   const [showAddTeaForm, setShowAddTeaForm] = useState(false)

@@ -108,7 +108,11 @@ function AddReview({ teaReviews, setTeaReviews, user, tea, showAddTeaForm, setSh
             <br></br>
             <br></br>
 
-            <button className="ui submit button center" type="submit">Post</button>
+            <button className="ui submit green button center" type="submit">Post</button>
+            
+            <br></br>
+            <br></br>
+
           </form>
         </div>
       </div>

@@ -59,6 +59,8 @@ function App() {
       
         <Route exact path="/auth">
           <Auth 
+            key={user.id}
+            user={user}
             setUser={setUser} 
             setIsAuthenticated={setIsAuthenticated} 
           />
@@ -70,6 +72,7 @@ function App() {
 
         <Route exact path="/teas">
           <TeaList 
+            key={user.id}
             teas={teas}
             searchTerm = {searchTerm}   
             onChangeSearch = {setSearchTerm}
@@ -80,6 +83,7 @@ function App() {
             <TeaDetail 
               teas={teas}
               user={user}
+              // setTeas={setTeas}
               // reviews={reviews}
               // setReviews={setReviews}
             />
