@@ -6,7 +6,6 @@ function EditReview({ review, userReviews, setUserReviews, showEditForm, setShow
         taste: review.taste,
         rating: review.rating,
         recommend: review.recommend
-        // recommend: review.recommend ? "Yes" : "No"
     })
 
     function handleChange(e) {
@@ -45,38 +44,49 @@ function EditReview({ review, userReviews, setUserReviews, showEditForm, setShow
             <div className="form-row">
                 <div className="form-group col-5">
                     <label>Review</label>
-                    <input 
+                    <textarea 
                         name="taste" 
                         type="text"
+                        rows="2"
+                        cols="80"
                         id={FormData.taste}
                         value={formData.taste}
                         onChange={(e) => handleChange(e)}
                     />
                 </div>
+                <br></br>
+
                 <div className="form-group col-5">
-                    <label>Rating</label>
+                    <label>Rating {" "}</label>
                     <input 
                         name="rating" 
-                        type="text" 
+                        type="range" 
+                        min="0" 
+                        max="5"
                         id={FormData.rating}
                         value={formData.rating}
                         onChange={(e) => handleChange(e)}
                     />
                 </div>
+                <br></br>
+
             </div>
             <div className="form-row">
                 <div className="form-group col-7">
                     <label>Recommend? </label>
-                    <input 
+                    <input
+                        className="ui checkbox" 
                         name="recommend" 
-                        type="text" 
+                        type="checkbox" 
                         id={FormData.recommend}
-                        value={formData.recommend}
+                        defaultChecked={review.recommend}
+                        value={review.recommend ? formData.recommend=false : formData.recommend=true}
                         onChange={(e) => handleChange(e)}
                     />
                 </div>
             </div>
             <br></br>
+            
             <button className="ui submit green button center" type="submit">Submit</button>
         </form>
     )
