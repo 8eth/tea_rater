@@ -101,6 +101,12 @@ import React, { useState } from 'react'
               <br></br>
               <br></br>
 
+              <div>
+                {errors.map((error) => (
+                  <ul className="errors">{error}</ul>
+                ))}
+              </div>
+
               <button className="ui primary labeled icon button" type="submit">
                 <i className="signup icon"></i>
                 Sign Up

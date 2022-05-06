@@ -45,15 +45,17 @@ function Login({ setUser, setIsAuthenticated }) {
               className="ui two fields form center"
               onSubmit={handleSubmit}
             >
-            <label> Username
+
+            <label> Username 
               <input
                 type="text"
                 placeholder="Username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-              />
-            </label>
-            <label htmlFor="password">Password:</label>
+              />            
+            </label> 
+
+            <label htmlFor="password">Password:
               <input
                 type="password"
                 placeholder="Password"
@@ -61,13 +63,18 @@ function Login({ setUser, setIsAuthenticated }) {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
+            </label>
+
             <br></br>
+
             <div>
               {errors.map((error) => (
                 <ul className="errors">{error}</ul>
               ))}
             </div>
+
             <br></br>
+            
             <button className="ui primary labeled icon button" type="submit">
               <i className="unlock alternate icon"></i>
               Login
