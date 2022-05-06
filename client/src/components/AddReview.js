@@ -5,7 +5,7 @@ function AddReview({ teaReviews, setTeaReviews, user, tea, showAddTeaForm, setSh
 
   const [formData, setFormData] = useState({
     taste: "",
-    rating: "",
+    rating: 0,
     recommend: false,
     user_id: user.id,
     tea_id: tea.id
@@ -61,32 +61,41 @@ function AddReview({ teaReviews, setTeaReviews, user, tea, showAddTeaForm, setSh
             className="ui two fields form center"
             onSubmit={(e) => handleSubmit(e)}
             >
+              
             <div>
             {errors.map((error) => (
                 <ul className="errors">- {error}</ul>
             ))}
             </div>
-            <label htmlFor="taste">Review:</label>
-            <input
+
+            <label htmlFor="taste">Review </label>
+            <textarea
               name="taste"
               type="text"
+              rows="4"
+              cols="80"
               id={FormData.taste}
               value={formData.taste}
               onChange={(e) => handleChange(e)}
             />
-            <label htmlFor="rating">Rating:</label>
+            <br></br>
+            <br></br>   
+
+            <label htmlFor="rating">Rating {" "}</label>
+            <br></br>
             <input
-              // className="ui dropdown"
               name="rating"
-              type="number"
+              type="range"
               min="0" 
               max="5"
               id={FormData.rating}
               value={formData.rating}
               onChange={(e) => handleChange(e)}
             />
-            <label htmlFor="recommend">Recommend?{" "}</label>
-            {/* <br></br> */}
+            <br></br>
+            <br></br> 
+
+            <label htmlFor="recommend"> {" "} Would you Recommend this tea? {" "}</label>
             <input
               className="ui checkbox"
               name="recommend"
@@ -96,9 +105,9 @@ function AddReview({ teaReviews, setTeaReviews, user, tea, showAddTeaForm, setSh
               value={formData.recommend ? formData.recommend=true : formData.recommend=false}
               onChange={(e) => handleChange(e)}
             />
+            <br></br>
+            <br></br>
 
-            <br></br>
-            <br></br>
             <button className="ui submit button center" type="submit">Post</button>
           </form>
         </div>
