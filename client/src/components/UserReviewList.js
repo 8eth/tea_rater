@@ -46,7 +46,7 @@ function UserReviewList({ review, userReviews, setUserReviews }) {
         </div>
 
         <div className="column">
-          
+
           <h5>{review.taste}</h5>
           <h5><Rating icon="star" rating={review.rating} maxRating={5} disabled/></h5>
           <h5>Recommend? {review.recommend ? "Yes ✅ " : "No ❌ " }</h5>
@@ -61,6 +61,9 @@ function UserReviewList({ review, userReviews, setUserReviews }) {
             <i className="large trash icon"></i>  
             Delete
           </button>
+          
+          <br></br>
+          <br></br>
 
           {showEditForm && 
             <EditReview 

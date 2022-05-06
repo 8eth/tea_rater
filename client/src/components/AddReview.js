@@ -6,7 +6,7 @@ function AddReview({ teaReviews, setTeaReviews, user, tea, showAddTeaForm, setSh
   const [formData, setFormData] = useState({
     taste: "",
     rating: "",
-    recommend: "",
+    recommend: false,
     user_id: user.id,
     tea_id: tea.id
   })
@@ -74,22 +74,29 @@ function AddReview({ teaReviews, setTeaReviews, user, tea, showAddTeaForm, setSh
               value={formData.taste}
               onChange={(e) => handleChange(e)}
             />
-            <label htmlFor="rating">Rating</label>
+            <label htmlFor="rating">Rating:</label>
             <input
+              // className="ui dropdown"
               name="rating"
-              type="text"
+              type="number"
+              min="0" 
+              max="5"
               id={FormData.rating}
               value={formData.rating}
               onChange={(e) => handleChange(e)}
             />
-            <label htmlFor="recommend">Recommend?</label>
+            <label htmlFor="recommend">Recommend?{" "}</label>
+            {/* <br></br> */}
             <input
+              className="ui checkbox"
               name="recommend"
-              type="text"
+              type="checkbox"
               id={FormData.recommend}
-              value={formData.recommend}
+              defaultChecked={false}
+              value={formData.recommend ? formData.recommend=true : formData.recommend=false}
               onChange={(e) => handleChange(e)}
             />
+
             <br></br>
             <br></br>
             <button className="ui submit button center" type="submit">Post</button>
