@@ -14,6 +14,7 @@ function NavBar({ setIsAuthenticated, setUser }) {
   }
   return ( 
     <div className="ui placeholder segment logo">
+
       <div className="ui three column small grid ">
 
         <div className="logo">
@@ -56,7 +57,17 @@ function NavBar({ setIsAuthenticated, setUser }) {
             PROFILE
           </NavLink> 
 
-          <button className="ui center floated button" onClick={()=>logout()}>LOG OUT</button>
+          <NavLink
+            to="/"
+            exact
+            className="ui center floated button"
+            onClick={()=>logout()}
+            activeStyle={{
+              background: "#E6E6E8",
+            }}>
+            LOG OUT
+          </NavLink> 
+
         </div>
 
       </div>
