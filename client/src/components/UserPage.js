@@ -44,9 +44,8 @@ function UserPage({ user }) {
 
       {userReviews.map((review) => {
         return (
-          <div className="ui segment">
+          <div className="ui segment" key={review.id}>
             <UserReviewList
-              key = {review.id}
               review = {review}
               userReviews={userReviews}
               setUserReviews = {setUserReviews}

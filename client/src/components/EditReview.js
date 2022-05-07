@@ -80,8 +80,16 @@ function EditReview({ review, userReviews, setUserReviews, showEditForm, setShow
                         type="checkbox" 
                         id={FormData.recommend}
                         defaultChecked={review.recommend}
-                        value={review.recommend ? formData.recommend=false : formData.recommend=true}
-                        onChange={(e) => handleChange(e)}
+                        value={formData.recommend}
+                        onChange={(e) => { setFormData({
+                                    ...formData,
+                                    recommend: !formData.recommend
+                                })
+                                review.recommend = !review.recommend
+                                const updatedReviews = userReviews.map(r => r.id === review.id ? review : r) 
+                                setUserReviews(updatedReviews)                        
+                            }
+                        }
                     />
                 </div>
             </div>

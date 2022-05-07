@@ -92,6 +92,8 @@ function App() {
         <Route path="/profile">
             <UserPage 
               user={user}
+              // reviews={reviews}
+              // setReviews={setReviews}
             />
         </Route>
 
