@@ -6,27 +6,16 @@ import Map from "./Map"
 
 function TeaDetail({ teas, user }) {
   let { id } = useParams();
-  let tea = teas.find(tea => tea.id == id)  
-  // let tea1 = teas.find(tea => tea.id == id)  
 
-
-  // if (tea === undefined) {
-  //   // return (<div>loading</div>)
-  //   console.log("tea is undefined")
-  // } else {    
-  //   console.log("tea is defined")
-  // }
-
-  // const [tea, setTea] = useState(tea1)
-  // if (tea === undefined) {
-  //   fetch("/teas")
-  //   .then((r) => r.json())
-  //   .then(setTeas)
-  //   .then(setTea(teas.find(tea => tea.id == id)))
-  // } 
-
-  const [teaReviews, setTeaReviews] = useState(tea.reviews)
+  const [teaReviews, setTeaReviews] = useState([])
   const [showAddTeaForm, setShowAddTeaForm] = useState(false)
+
+
+  if (teas === [] || teas.find(tea => tea.id == id) === undefined || teaReviews === []) {
+    return (<div>loading</div>);
+  }
+  
+  let tea = teas.find(tea => tea.id == id)  
 
   function handleAddTeaForm(e, showAddTeaForm){
     e.stopPropagation()
@@ -108,7 +97,7 @@ function TeaDetail({ teas, user }) {
               <p className="divider"></p>
               <h3>Reviews</h3>
 
-              {teaReviews.map((review) => {
+              {tea.reviews.map((review) => {
                 return (
                   <div className="ui segment">
                     <TeaReviewList
