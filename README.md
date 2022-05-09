@@ -1,25 +1,20 @@
 # Tea Rater
-
 This application is used to leave and view reviews on a list of teas.
 
 ## Deployed App
-
 https://tea-rater.herokuapp.com
 
 ## Front End
-
 The front-end of the website is built using React. `npm start --prefix client` runs the app in the development mode. Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
 
 ![Components](./client/public/images/Components.png)
 
 ## Back End
-
 The back-end of the website is built using Ruby on Rails. `rails db:create db:migrate db:seed` then run `rails s` to run the back-end of the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ![ERD](./client/public/images/ERD.png)
 
 ## User Stories
-
 The application allows the user to 
   * Sign-up for an account
   * Login / logout of account
@@ -34,7 +29,6 @@ The application allows the user to
   * Get routed to a shop to purchase the tea
 
 ## Styling
-
 This application uses the following for styling
   * Semantic UI
   * Custom css
@@ -72,7 +66,6 @@ This application uses the following for styling
 ![LoginErrors](./client/public/images/LoginErrors.png)
 
 ## Author
-
 Beth Fekadu
   * GitHub: https://github.com/8eth 
   * Linkedin: https://www.linkedin.com/in/betelihem-fekadu-mlst-16930874/
