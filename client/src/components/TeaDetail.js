@@ -12,8 +12,8 @@ function TeaDetail({ teas, user }) {
 
   if (teas === [] || teas.find(tea => tea.id == id) === undefined || teaReviews === []) {
     return (<div>loading</div>);
-  }
-  
+  } 
+
   let tea = teas.find(tea => tea.id == id)  
 
   function handleAddTeaForm(e, showAddTeaForm){
@@ -98,9 +98,8 @@ function TeaDetail({ teas, user }) {
 
               {tea.reviews.map((review) => {
                 return (
-                  <div className="ui segment">
+                  <div className="ui segment" key={review.id}>
                     <TeaReviewList
-                      key = {review.id}
                       review = {review}
                     />
                   </div>
