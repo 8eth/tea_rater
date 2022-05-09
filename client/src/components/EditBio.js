@@ -1,10 +1,8 @@
 import React,{ useState } from 'react'
 
 function EditBio({ user, userBio, setUserBio, showEditForm, setShowEditForm }) {
-    // console.log(userBio) 
-
     const [formData, setFormData] = useState ({ 
-        bio: user.bio
+        bio: userBio
     })
 
     function handleChange(e) {
@@ -20,7 +18,6 @@ function EditBio({ user, userBio, setUserBio, showEditForm, setShowEditForm }) {
         const editedBio = {
             bio: formData.bio
         }
-        // const editedBio = formData.bio
 
         fetch(`/users/${user.id}`, {
             method: "PATCH",

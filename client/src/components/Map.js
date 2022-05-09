@@ -5,7 +5,6 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmb
 
 const Map = ({ tea }) => {
   const mapContainerRef = useRef(null);
-
   const [lng, setLng] = useState(tea.origin_longitude);
   const [lat, setLat] = useState(tea.origin_latitude);
   const [zoom, setZoom] = useState(2.7);

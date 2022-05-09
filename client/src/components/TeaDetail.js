@@ -37,9 +37,8 @@ function TeaDetail({ teas, user }) {
               <h3>Tea Origin</h3>
             </div>
 
-            <div className="center-content">
+            <div className="center-content" key={tea.id}>
               <Map 
-                key={user.id}
                 tea={tea}
               />
             </div>

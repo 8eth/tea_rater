@@ -27,7 +27,7 @@ function TeaList({ teas, searchTerm, onChangeSearch}) {
             <div className="ui grid">
                 <div className="ui center aligned four wide row grid container">{mappedTeas}</div>
             </div>
-
+            <br></br>
         </div>
     )
 }
