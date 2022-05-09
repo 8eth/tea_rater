@@ -10,7 +10,6 @@ function TeaDetail({ teas, user }) {
   const [teaReviews, setTeaReviews] = useState([])
   const [showAddTeaForm, setShowAddTeaForm] = useState(false)
 
-
   if (teas === [] || teas.find(tea => tea.id == id) === undefined || teaReviews === []) {
     return (<div>loading</div>);
   }

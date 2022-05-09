@@ -1,7 +1,7 @@
 import React,{ useState } from 'react'
 
 function EditBio({ user, userBio, setUserBio, showEditForm, setShowEditForm }) {
-    console.log(userBio)
+    // console.log(userBio) 
 
     const [formData, setFormData] = useState ({ 
         bio: user.bio

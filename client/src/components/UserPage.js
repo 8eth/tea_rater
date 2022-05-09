@@ -12,6 +12,8 @@ function UserPage({ user }) {
     setShowEditForm(!showEditForm)
   }
 
+  // console.log(user.bio)
+
   return (
 
     <div className="home-border">
@@ -54,8 +56,6 @@ function UserPage({ user }) {
         )
       })}
 
-
-  
     </div>
   )
 }
