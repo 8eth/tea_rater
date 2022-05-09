@@ -16,7 +16,7 @@ function TeaCard({ tea }) {
 
         <div className='ui buttons'>
           <NavLink
-            to={"/teas/" + tea.id}
+            to={"/teas" + tea.id}
             exact
             className="ui center floated button"                
             activeStyle={{

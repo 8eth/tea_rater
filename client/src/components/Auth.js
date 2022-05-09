@@ -3,7 +3,7 @@ import Signup from "./Signup"
 import Login from './Login'
 import Footer from './Footer'
 
-function Auth({ setUser, setIsAuthenticated, user }) {
+function Auth({ setUser, setIsAuthenticated }) {
   return (
     <div>
 

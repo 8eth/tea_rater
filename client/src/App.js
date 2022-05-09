@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Route, Switch } from "react-router-dom"
 import NavBar from "./components/NavBar"
 import Auth from "./components/Auth"
-import Home from "./components/Home"
+// import Home from "./components/Home"
 import TeaList from "./components/TeaList"
 import TeaDetail from "./components/TeaDetail"
 import UserPage from "./components/UserPage"
@@ -66,11 +66,11 @@ function App() {
           />
         </Route>
 
-        <Route exact path="/">
+        {/* <Route exact path="/">
           <Home />
-        </Route>
+        </Route> */}
 
-        <Route exact path="/teas">
+        <Route exact path="/">
           <TeaList 
             key={user.id}
             teas={teas}
@@ -79,7 +79,7 @@ function App() {
           />
         </Route>
 
-        <Route path="/teas/:id">
+        <Route path="/teas:id">
             <TeaDetail 
               teas={teas}
               user={user}

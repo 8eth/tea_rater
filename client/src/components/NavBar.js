@@ -27,7 +27,7 @@ function NavBar({ setIsAuthenticated, setUser }) {
 
         <div className="navBar">
 
-          <NavLink
+          {/* <NavLink
             to="/"
             exact
             className="ui center floated button"
@@ -35,10 +35,10 @@ function NavBar({ setIsAuthenticated, setUser }) {
               background: "#E6E6E8",
             }}>
             HOME
-          </NavLink> 
+          </NavLink>  */}
 
           <NavLink
-            to="/teas"
+            to="/"
             exact
             className="ui center floated button"
             activeStyle={{
