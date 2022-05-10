@@ -4,7 +4,7 @@ import TeaReviewList from "./TeaReviewList"
 import AddReview from "./AddReview"
 import Map from "./Map"
 
-function TeaDetail({ teas, user }) {
+function TeaDetail({ teas, user, reviews, setReviews }) {
   let { id } = useParams();
 
   const [teaReviews, setTeaReviews] = useState([])
@@ -15,6 +15,8 @@ function TeaDetail({ teas, user }) {
   } 
 
   let tea = teas.find(tea => tea.id == id)  
+
+  const currentTeaReviews = reviews.filter((review) => review.tea.id == id) ///important
 
   function handleAddTeaForm(e, showAddTeaForm){
     e.stopPropagation()
@@ -78,12 +80,14 @@ function TeaDetail({ teas, user }) {
                     {showAddTeaForm && 
                       <AddReview
                         key={user.id}
-                        teaReviews={teaReviews}
-                        setTeaReviews={setTeaReviews}
+                        // teaReviews={teaReviews}
+                        // setTeaReviews={setTeaReviews}
                         user={user}
                         tea={tea}
                         showAddTeaForm={showAddTeaForm}
                         setShowAddTeaForm={setShowAddTeaForm}
+                        reviews = {reviews}
+                        setReviews={setReviews}
                       />
                     }
                     <br></br>
@@ -95,7 +99,7 @@ function TeaDetail({ teas, user }) {
               <p className="divider"></p>
               <h3>Reviews</h3>
 
-              {tea.reviews.map((review) => {
+              {currentTeaReviews.map((review) => {
                 return (
                   <div className="ui segment" key={review.id}>
                     <TeaReviewList

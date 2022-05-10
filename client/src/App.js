@@ -14,7 +14,7 @@ function App() {
   const [user, setUser] = useState(null);
   const [teas, setTeas] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  // const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     fetch('/authorize')
@@ -38,11 +38,11 @@ function App() {
     .then(setTeas)
   }, [])
 
-  // useEffect(() => {
-  //   fetch("/reviews")
-  //   .then((r) => r.json())
-  //   .then(setReviews)
-  // }, [])
+  useEffect(() => {
+    fetch("/reviews")
+    .then((r) => r.json())
+    .then(setReviews)
+  }, [])
 
   if (!isAuthenticated) return <Auth error={'please login'} setIsAuthenticated={setIsAuthenticated} setUser={setUser} />;
   if (!user) return <Auth setUser={setUser} setIsAuthenticated={setIsAuthenticated} />
@@ -84,8 +84,8 @@ function App() {
               teas={teas}
               user={user}
               // setTeas={setTeas}
-              // reviews={reviews}
-              // setReviews={setReviews}
+              reviews={reviews}
+              setReviews={setReviews}
             />
         </Route>
 

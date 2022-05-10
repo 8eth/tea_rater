@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function AddReview({ teaReviews, setTeaReviews, user, tea, showAddTeaForm, setShowAddTeaForm }) {
+function AddReview({ user, tea, showAddTeaForm, setShowAddTeaForm, reviews, setReviews }) {
   const [errors, setErrors] = useState([]);
 
   const [formData, setFormData] = useState({
@@ -18,7 +18,8 @@ function AddReview({ teaReviews, setTeaReviews, user, tea, showAddTeaForm, setSh
   }
   
   function onCreateReview(newReview) {
-    setTeaReviews([...teaReviews, newReview])
+    // setTeaReviews([...teaReviews, newReview])
+    setReviews([...reviews, newReview])
   }
 
   function handleSubmit(e) {
