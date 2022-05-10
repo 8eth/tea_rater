@@ -1,33 +1,33 @@
 import React,{ useState } from 'react'
 
-function EditBio({ user, userBio, setUserBio, showEditForm, setShowEditForm }) {
-    const [formData, setFormData] = useState ({ 
+function EditBio({ user, setUser, userBio, setUserBio, showEditForm, setShowEditForm }) {
+    
+    const [formData, setFormData] = useState ({
         bio: userBio
     })
 
     function handleChange(e) {
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value,
+            bio: e.target.value,
         });
     }
 
     function handleSubmit(e) { 
         e.preventDefault();
 
-        const editedBio = {
-            bio: formData.bio
-        }
+        const editedBio = formData
 
         fetch(`/users/${user.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({userBio: editedBio})
+            body: JSON.stringify(editedBio)
         })
         .then(response => response.json())
-        .then(setUserBio((userBio) => editedBio))
+        .then(setUserBio({bio: editedBio}))
+        .then(setUser(user)) ////
         .then(setShowEditForm(!showEditForm))
     }
 

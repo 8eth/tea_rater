@@ -18,17 +18,21 @@ class UsersController < ApplicationController
     end
 
     def update
-        @user.update!(user_params)
+        @user.update!(user_bio_params)
         render json: @user
     end
 
     private
 
     def find_user
-        @user = User.find(params[:id])
+        @user = User.find_by(id: session[:user_id])
     end
 
     def user_params
         params.permit(:username, :password, :password_confirmation, :bio, :picture)
+    end
+
+    def user_bio_params
+        params.permit(:bio)
     end
 end

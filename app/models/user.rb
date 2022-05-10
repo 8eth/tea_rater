@@ -3,6 +3,6 @@ class User < ApplicationRecord
     has_many :reviews, dependent: :destroy
     has_many :teas, through: :reviews
 
-    validates :username, :password, presence: true
-    validates :username, uniqueness: true
+    validates :username, presence: true, uniqueness: true
+    validates :password, presence: true, on: :create
 end
