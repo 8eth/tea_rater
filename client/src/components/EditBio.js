@@ -1,10 +1,8 @@
 import React,{ useState } from 'react'
 
-function EditBio({ user, setUser, userBio, setUserBio, showEditForm, setShowEditForm }) {
+function EditBio({ user, userBio, setUserBio, showEditForm, setShowEditForm }) {
     
-    const [formData, setFormData] = useState ({
-        bio: userBio
-    })
+    const [formData, setFormData] = useState(userBio)
 
     function handleChange(e) {
         setFormData({
@@ -26,8 +24,7 @@ function EditBio({ user, setUser, userBio, setUserBio, showEditForm, setShowEdit
             body: JSON.stringify(editedBio)
         })
         .then(response => response.json())
-        .then(setUserBio({bio: editedBio}))
-        .then(setUser(user)) ////
+        .then(setUserBio(editedBio))
         .then(setShowEditForm(!showEditForm))
     }
 

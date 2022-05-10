@@ -26,6 +26,7 @@ The application allows the user to
   * Edit a review left on on a tea
   * Delete a review left on a tea
   * View profile details and all reviews left on different teas on one page
+  * Edit their bio on profile page
   * Get routed to a shop to purchase the tea
 
 ## Styling
@@ -53,7 +54,7 @@ This application uses the following for styling
 ## Add Review Feature
 ![AddReview](./client/public/images/AddReview.png)
 
-## Profile Page
+## Profile Page / Edit Bio
 ![Profile](./client/public/images/Profile.png)
 
 ## Edit / Delete Review Feature

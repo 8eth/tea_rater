@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 import UserReviewList from './UserReviewList'
 import EditBio from './EditBio'
 
-function UserPage({ user, setUser, reviews, setReviews }) {
+function UserPage({ user, reviews, setReviews }) {
   const [userReviews, setUserReviews] = useState(user.reviews)
-  const [userBio, setUserBio] = useState(user.bio)
+  const [userBio, setUserBio] = useState({bio: user.bio})
   const [showEditForm, setShowEditForm] = useState(false)
 
   function handleEditForm(e, showEditForm){
@@ -23,7 +23,7 @@ function UserPage({ user, setUser, reviews, setReviews }) {
       </div>
       <h2>@{user.username}</h2>
       <p className="divider"></p>
-      <h4>{user.bio}</h4>
+      <h4>{userBio.bio}</h4> 
 
       <button className="ui small black basic button" onClick={(e) => handleEditForm(e, showEditForm)}>
         <i className="large edit icon"></i>  
@@ -35,7 +35,6 @@ function UserPage({ user, setUser, reviews, setReviews }) {
         <EditBio 
           key={user.id} 
           user={user}
-          setUser={setUser} ////
           userBio={userBio} 
           setUserBio={setUserBio}
           showEditForm={showEditForm}
