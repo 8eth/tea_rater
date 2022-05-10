@@ -7,16 +7,15 @@ import Map from "./Map"
 function TeaDetail({ teas, user, reviews, setReviews }) {
   let { id } = useParams();
 
-  const [teaReviews, setTeaReviews] = useState([])
   const [showAddTeaForm, setShowAddTeaForm] = useState(false)
 
-  if (teas === [] || teas.find(tea => tea.id == id) === undefined || teaReviews === []) {
+  if (teas === [] || teas.find(tea => tea.id == id) === undefined) {
     return (<div>loading</div>);
   } 
 
   let tea = teas.find(tea => tea.id == id)  
 
-  const currentTeaReviews = reviews.filter((review) => review.tea.id == id) ///important
+  const currentTeaReviews = reviews.filter((review) => review.tea.id == id)
 
   function handleAddTeaForm(e, showAddTeaForm){
     e.stopPropagation()
@@ -80,8 +79,6 @@ function TeaDetail({ teas, user, reviews, setReviews }) {
                     {showAddTeaForm && 
                       <AddReview
                         key={user.id}
-                        // teaReviews={teaReviews}
-                        // setTeaReviews={setTeaReviews}
                         user={user}
                         tea={tea}
                         showAddTeaForm={showAddTeaForm}

@@ -1,6 +1,6 @@
 import React,{ useState } from 'react'
 
-function EditReview({ review, userReviews, setUserReviews, showEditForm, setShowEditForm }) {
+function EditReview({ review, showEditForm, setShowEditForm, reviews, setReviews }) {
     
     const [formData, setFormData] = useState ({ 
         taste: review.taste,
@@ -33,8 +33,8 @@ function EditReview({ review, userReviews, setUserReviews, showEditForm, setShow
         })
         .then(response => response.json())
         .then(editedReview => {
-            const updatedReviews = userReviews.map(review => review.id === editedReview.id ? editedReview : review) 
-            setUserReviews(updatedReviews)
+            const updatedReviews = reviews.map(review => review.id === editedReview.id ? editedReview : review) 
+            setReviews(updatedReviews)
         })
         .then(setShowEditForm(!showEditForm))
     }
@@ -86,8 +86,8 @@ function EditReview({ review, userReviews, setUserReviews, showEditForm, setShow
                                     recommend: !formData.recommend
                                 })
                                 review.recommend = !review.recommend
-                                const updatedReviews = userReviews.map(r => r.id === review.id ? review : r) 
-                                setUserReviews(updatedReviews)                        
+                                const updatedReviews = reviews.map(r => r.id === review.id ? review : r) 
+                                setReviews(updatedReviews)                        
                             }
                         }
                     />

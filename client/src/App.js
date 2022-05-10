@@ -83,7 +83,6 @@ function App() {
             <TeaDetail 
               teas={teas}
               user={user}
-              // setTeas={setTeas}
               reviews={reviews}
               setReviews={setReviews}
             />
@@ -92,8 +91,8 @@ function App() {
         <Route path="/profile">
             <UserPage 
               user={user}
-              // reviews={reviews}
-              // setReviews={setReviews}
+              reviews={reviews}
+              setReviews={setReviews}
             />
         </Route>
 

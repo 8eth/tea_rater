@@ -18,7 +18,6 @@ function AddReview({ user, tea, showAddTeaForm, setShowAddTeaForm, reviews, setR
   }
   
   function onCreateReview(newReview) {
-    // setTeaReviews([...teaReviews, newReview])
     setReviews([...reviews, newReview])
   }
 

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { Rating } from 'semantic-ui-react' 
 import EditReview from './EditReview'
 
-function UserReviewList({ review, userReviews, setUserReviews }) {
+function UserReviewList({ review, reviews, setReviews}) {
   const [showEditForm, setShowEditForm] = useState(false)
 
   function handleEditForm(e, showEditForm){
@@ -18,8 +18,8 @@ function UserReviewList({ review, userReviews, setUserReviews }) {
     fetch(`/reviews/${review.id}`, {
       method: "DELETE",
     })
-    const newReviews = userReviews.filter(UserReviewId => UserReviewId !== review)
-    setUserReviews(newReviews)
+    const newReviews = reviews.filter(UserReviewId => UserReviewId !== review)
+    setReviews(newReviews)
   }
 
   function handleDelete(e){
@@ -69,8 +69,8 @@ function UserReviewList({ review, userReviews, setUserReviews }) {
             <EditReview 
               key={review.id} 
               review={review} 
-              userReviews={userReviews}
-              setUserReviews={setUserReviews}
+              reviews = {reviews}
+              setReviews={setReviews}
               showEditForm={showEditForm}
               setShowEditForm={setShowEditForm}
             />

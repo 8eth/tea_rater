@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import UserReviewList from './UserReviewList'
 import EditBio from './EditBio'
 
-function UserPage({ user }) {
+function UserPage({ user,  reviews, setReviews }) {
   const [userReviews, setUserReviews] = useState(user.reviews)
   const [userBio, setUserBio] = useState(user.bio)
   const [showEditForm, setShowEditForm] = useState(false)
@@ -13,6 +13,7 @@ function UserPage({ user }) {
   }
 
   // console.log(user.bio)
+  const currentUserReviews = reviews.filter((review) => review.user.id == user.id)
 
   return (
 
@@ -44,13 +45,15 @@ function UserPage({ user }) {
 
       <p className="divider"></p>
 
-      {userReviews.map((review) => {
+      {currentUserReviews.map((review) => {
         return (
           <div className="ui segment" key={review.id}>
             <UserReviewList
               review = {review}
               userReviews={userReviews}
               setUserReviews = {setUserReviews}
+              reviews = {reviews}
+              setReviews={setReviews}
             />
           </div>
         )
