@@ -5,11 +5,11 @@ function NavBar({ setIsAuthenticated, setUser }) {
 
   const logout = () => {
     fetch('/logout',{
-        method:'DELETE'
+      method:'DELETE'
     })
     .then(()=>{
-        setIsAuthenticated(false)
-        setUser(null)
+      setIsAuthenticated(false)
+      setUser(null)
     })
   }
   return ( 
