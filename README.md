@@ -69,4 +69,4 @@ This application uses the following for styling
 ## Author
 Beth Fekadu
   * GitHub: https://github.com/8eth 
-  * Linkedin: https://www.linkedin.com/in/betelihem-fekadu-mlst-16930874/
+  * Linkedin: [https://www.linkedin.com/in/betelihem-fekadu-mlst-16930874/](https://www.linkedin.com/in/beth-fekadu)
